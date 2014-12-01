@@ -12,3 +12,4 @@ These are some pages that should exist. They don't yet.
 * [Mesh Local Intro](meshlocals/intro.md)
  * [Existing Meshlocals](meshlocals/list.md)
  * [WiFi Recommendations](meshlocals/wifi.md)
+ * [Starting Your Own](meshlocals/diy.md)
