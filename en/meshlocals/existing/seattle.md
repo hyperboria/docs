@@ -1,7 +1,7 @@
 Seattle Meshnet
 ============
 
-**Subreddit**: [/r/VirginiaMesh](https://www.reddit.com/r/SeattleMeshnet)
+**Subreddit**: [/r/SeattleMeshnet](https://www.reddit.com/r/SeattleMeshnet)
 
 **IRC Channel:** [#SeattleMeshnet on EFNet](irc://irc.efnet.org/#seattlemeshnet)
 
