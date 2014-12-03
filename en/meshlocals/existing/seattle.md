@@ -5,4 +5,4 @@ Seattle Meshnet
 
 **IRC Channel:** [#SeattleMeshnet on EFNet](irc://irc.efnet.org/#seattlemeshnet)
 
-**Mailing List:** http://lists.projectmesh.net/seattle
+**Mailing List:** [click me](https://lists.projectmesh.net/seattle)
