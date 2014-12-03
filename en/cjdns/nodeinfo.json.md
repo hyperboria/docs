@@ -7,9 +7,8 @@ see what people do with it.
 
 A JSON file at `/nodeinfo.json` that looks something like below. Parsers should
 have no expecations about this file, in my tests found several 404 or other
-non-JSON pages at that path returning HTTP 200. Further, all keys are optional
-because this is Hyperboria and there ain't shit we can do to make people follow
-our rules. Additional fields can me made up by other node operators. This spec
+non-JSON pages at that path returning HTTP 200. Further, all keys are optional.
+Additional fields can me made up by other node operators. This spec
 will change as we see how people use it. Please provide at least a contact
 email, and ideally a PGP fingerprint with the full key on public keyservers.
 
@@ -37,13 +36,13 @@ Sample Files:
   "services": [
     {
       "uri": "http://[fc00:]/",
-      "name": "My awsum http website",
-      "description": "my blag and bullshit"
+      "name": "My awesome http website",
+      "description": "my blag and stuff"
     },
     {
       "uris": {
-        "webInterface" :"http://lolwhatever.tld/omgservice",
-        "otherthing": "jfc://lolwhatever.tld/?whatever"
+        "webInterface" :"http://example.tld/",
+        "otherthing": "cactus://example.tld/"
       },
       "name": "MutliURI service"
       "description": "Some service with multiple URIs"
