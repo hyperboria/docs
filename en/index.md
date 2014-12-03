@@ -13,6 +13,6 @@ if you make them
  * [*Internet Tunneling/Peering*](cjdns/UDPInterface.md)
 * [*OpenWRT*](OpenWRT.md)
 * [Mesh Local Intro](meshlocals/intro.md)
- * [*Existing Meshlocals*](meshlocals/list.md)
+ * [Existing Meshlocals](meshlocals/existing/index.md)
  * [*WiFi Recommendations*](meshlocals/wifi.md)
  * [Starting Your Own](meshlocals/diy.md)
