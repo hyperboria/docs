@@ -5,7 +5,7 @@ yours by submitting a pull request.
 
  * **United States**
   * California
-      * [San Diego](sandiego.md)
+    * [San Diego](sandiego.md)
   * [Virginia](virginia.md)
   * Washington
-      * [Seattle](seattle.md)
+    * [Seattle](seattle.md)
