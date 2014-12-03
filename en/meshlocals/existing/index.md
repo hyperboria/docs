@@ -7,3 +7,4 @@ yours by submitting a pull request.
   * [Virginia](virginia.md)
   * Washington
     * [Seattle](seattle.md)
+  * [San Diego](sandiego.md)
