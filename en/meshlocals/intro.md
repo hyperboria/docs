@@ -12,6 +12,6 @@ While this is useful for connecting with others who are interested, and for form
 
 <div class="mermaid">
     graph LR;
-        A(Local node)-->|wireless lan cable|B(Other local node);
-        B-->A;
+        A(Local node)--\>|wireless lan cable|B(Other local node);
+        B--\>A;
 </div>
