@@ -5,7 +5,7 @@
 These are some pages that should exist. *Italicized* ones don't yet. Unitalicize
 if you make them
 
-* [*Intro*](Intro.md)
+* [Intro](Intro.md)
  * [*cjdns Installation*](cjdns/Installation.md)
  * [*Node Operator Guidelines*](cjdns/Operator_Guidelines.md)
  * [nodeinfo.json](cjdns/nodeinfo.json.md)
