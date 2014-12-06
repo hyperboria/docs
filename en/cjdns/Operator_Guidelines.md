@@ -8,11 +8,11 @@ When you become part of the network, you have become an ISP. This gives you cert
 
 When you start up cjdns, you become an IPv6 host. Many programs, such as http, ssh, or smtp servers, will automatically bind to this new address. If you do not want these services to be available over your cjdns interface, you should either modify your `ip6tables` rules, or edit the configuration file of the service in question (a simple Google search can help with this for most programs).
 
-To scan your box for running services:
+To scan your box for running services, first get your cjdns address by running:
 
 `$ ip addr | grep "inet6 fc"`
 
-and then
+and then port scan that address with:
 
 `$ nmap -6 <CJDNS ADDRESS>`
 
@@ -32,9 +32,12 @@ On the same lines as peering efficiently, be careful that nobody steals your pee
 
 The passwords should not be passwords, they should be long strings of gibberish that are practically impossible for an attacker to guess. To generate a strong password, you can run this bash command:
 
-```$ cat /dev/urandom | strings | head -n 20 | tr -d '\n"`\ \t{}' | head -c 40 && echo```
+```
+$ cat /dev/urandom | strings | head -n 20 | tr -d '\n"`\ \t{}' | head -c 40 && echo
 
-DO NOT transfer peering credentials over any sort of plaintext medium. It's probably also a good idea to use a service like [EZCrypt](https://ezcrypt.it) (also available [on Hyperboria](http://cjdns.ezcrypt.it)).
+```
+
+DO NOT transfer peering credentials over any sort of plaintext medium, such as IRC or unencrypted email. It's probably also a good idea to use a service like [EZCrypt](https://ezcrypt.it) (also available [on Hyperboria](http://cjdns.ezcrypt.it)) or send your peering details via encrypted email with PGP.
 
 ---
 
