@@ -15,3 +15,5 @@ While this is useful for connecting with others who are interested, and for form
         A(Local node)--\>|wireless lan cable|B(Other local node);
         B--\>A;
 </div>
+
+**NOTE**: If you're viewing this on a web page which does not include [mermaid.js](https://github.com/knsv/mermaid), you'll just see some weird text. For an example of how it **should** look, see it in [its original context](https://docs.meshwith.me/en/meshlocals/intro.html).
