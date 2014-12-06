@@ -1,5 +1,5 @@
 # Documentation
-*Documeting things related to the meshnet*
+*Documenting things related to the meshnet*
 
 We're writing documentation for meshnet related things. Feel free to submit pull requests.
 
