@@ -5,3 +5,4 @@
 * Internet Tunneling/Peering in en/cjdns/
 * OpenWRT in en/
 * WiFi Recommendations in en/meshlocals/
+* cjdns/contrib/ scripts
