@@ -1,17 +1,15 @@
----
-author: kpcyrd
-title: what the fc00::/8
-original location: https://github/ansuz/cjdns-pr
----
 # What the fc00::/8
 ## a brief introduction to cjdns
 
-github.com/**kpcyrd**
+author: [kpcyrd](http://github.com/kpcyrd)
 
-> We have the means and we have the technology to end mass surveillance without any legislative action at all, without any policy changes. By basically adopting changes like making encryption a universal standard - where all communications are encrypted by default - we can end mass surveillance not just in the United States but around the world.
-> - Edward Snowden
+original location: https://github/ansuz/cjdns-pr
 
----
+```quote
+We have the means and we have the technology to end mass surveillance without any legislative action at all, without any policy changes. By basically adopting changes like making encryption a universal standard - where all communications are encrypted by default - we can end mass surveillance not just in the United States but around the world.
+- Edward Snowden
+```
+
 ## The current internet
 
  - Addresses get spoofed
@@ -20,7 +18,6 @@ github.com/**kpcyrd**
  - Controlled by evil corps
  - **Everybody can read yo packets**
 
----
 ## Where we're going
 
 - Encrypts all your packets
@@ -29,20 +26,17 @@ github.com/**kpcyrd**
 - Clean IPv6 networking interface
 - Enough addresses for everybody
 
----
 ## Sounds complicated
 
 1. Install cjdns
 2. Find a friend to connect to
 
----
 ## Friend to Friend
 
 - Nobody knows who's behind an address since there's no registry
 - Your friends know, though
 - In case of abuse your friends may stop peering with you
 
----
 ## Peering (The simple way)
 
 1. Get a friend who's connected
@@ -51,7 +45,6 @@ github.com/**kpcyrd**
 4. Enable autopeering
 5. Connection established
 
----
 ## Peering (Over the internet)
 
 1. Configure an IP address on both sides
@@ -59,7 +52,6 @@ github.com/**kpcyrd**
 3. Exchange peering credentials over a secure channel
 4. Encrypted traffic will be encapsulated in UDP packets
 
----
 ## How is it secure?
 
 There's no central trust authority.
@@ -70,7 +62,6 @@ All those random letters are used to verify your identity.
 
 The address is the cryptographical fingerprint.
 
----
 ## ICANN hax it
 
 - Don't use DNS to distribute your IPv6
@@ -79,14 +70,12 @@ The address is the cryptographical fingerprint.
 
 If we use the current domain name system it's not very secure
 
----
 ## Namecoin to the rescue
 
 - Fully decentralized
 - Stores all addresses in an uncensorable blockchain
 - Cryptographically ensures authenticity
 
----
 ## Next steps
 
 - Android devs - Help going mobile
@@ -95,5 +84,3 @@ If we use the current domain name system it's not very secure
 - Windows devs - Help the lost souls
 
 All skill levels wanted
-
----
