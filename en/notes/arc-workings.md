@@ -1,14 +1,14 @@
 # Random details of cjdns' inner workings
 
-Ansuz' notes of a Q&A with Arceliar
-
+ansuz' notes of a Q&A with Arceliar
 
 ## Probability of IPv6 address collisions
 
 Or the math behind the birthday problem RE: cjdns
 
-*Arc:* I remember that it was something like 1/10^18, and I remember the basic expression to derive that, but you had some fancy trick that got around the combinatorial explosion
-Do you want the number of nodes before there's a >50% probability of a match? 1%? 0.1%?... I know there's a general formula for this, or at least a damn good approximation of it. Give me a min...
+*Ansuz:* I remember that it was something like 1/10^18, and I remember the basic expression to derive that, but you had some fancy trick that got around the combinatorial explosion
+
+*Arc:* Do you want the number of nodes before there's a >50% probability of a match? 1%? 0.1%?... I know there's a general formula for this, or at least a damn good approximation of it. Give me a min...
 
 *Ansuz:* awesome, yea, maybe the method of how you calculate it efficiently. Maybe I could put it into javascript on a webpage so people can play with those values?
 
@@ -35,16 +35,13 @@ If you want to see a plot of number of guesses needed (y-axis) to have a probabi
 > \<ansuz> +lotto
 > \<mg2bot> 1 in 1,329,227,995,784,915,872,903,807,060,280,344,576 chance of generating the same IPv6. Feeling Lucky?
 
-And that gets you the chances of anyone guessing a key that gets them *your* IP. Even if they do, that doesn't mean its your key, so your traffic is still safe... it just means they can impersonate you (which would probably cause crazy things to happen to the routing logic, we should give two peers the same key just to test that...)
-
-
-### this node died, I think. updating to the latest commit
+*Arc:* And that gets you the chances of anyone guessing a key that gets them *your* IP. Even if they do, that doesn't mean its your key, so your traffic is still safe... it just means they can impersonate you (which would probably cause crazy things to happen to the routing logic, we should give two peers the same key just to test that...)
 
 Ansuz: A common problem I've noticed is that we store our information on IRC  bots that sometimes die. and a snippet like +lotto doesn't really  explain anything.
 It's just a huge issue that these things get figured out, and then forgotten. and people are supposed to just trust some irc bot that everything is secure.
 I'm trying to gather up all this info and put it in a better format, and mirror it all over the place (sync'ed with rsync/git atm)
 
-### About XOR distance and finding nodes
+## About XOR distance and finding nodes
 
 Ansuz: I've heard that cjdroute remembers nodes with similar xor values. randati is using this for fc00.org - generating new nodes to help expand his routing table.
 
@@ -69,12 +66,23 @@ Ansuz: lol, oh so every address would end in cf? or that's a hash.. so maybe not
 
 Arceliar: Addresses would still start with fc. right now, before we xor, we basically swap positions of the first and second half of the address, to keep the fc away from the first few bits because the DHT would hate that. My point is, if that's what we're worried about, we could keep the same addresses but flip them (so it would look like it ends in... not cf but whatever the bitwise reverse of fc is) (its.. 03) right before we xor. Nobody outside the cjdns code base would have any idea that this happens. It would just be slightly less confusing to work around than a 64 bit rotation... that or we chop the leading fc off of things before calculating anything. Implementation details, don't worry about it.
 
-ircerr: I was going to say we could make a script based off of http://ansuz.syrinxist.org/share/ArceliarAMA/vanitygen.sh.txt
-Ansuz: but if it's gonna mask bugs I won't bother
+Ansuz: I was going to say we could make a script based off of:
 
-### Best number of peers to have?
+~~http://ansuz.syrinxist.org/share/ArceliarAMA/vanitygen.sh.txt~~
 
-So far I wrote this: http://ansuz.syrinxist.org/faq#architecture but I'd love to have some facts to back it up
+https://wiki.projectmeshnet.org/Tips_and_Tricks#Picking_a_memorable_IPv6_address 
+
+but if it's gonna mask bugs I won't bother
+
+## Best number of peers to have?
+
+So far I wrote this: 
+
+~~http://ansuz.syrinxist.org/faq#architecture~~
+
+http://ansuz.transitiontech.ca/faq#how-many-peers-should-i-have- 
+
+but I'd love to have some facts to back it up
 
 "if you're on a laptop that you travel with, you probably don't want to  route for people. For instance, if you occasionally tether your phone,  you might accidentally run up your data bill if you aren't mindful of  the traffic you are routing. In such a case, keep only one peer, and you  will never be a path, only a leaf node. "
 
@@ -84,8 +92,7 @@ The rest of the peering advice looks in general good. My only real comment is th
 
 <3 peer review
 
-
-### Also:
+## Also:
 
 Randati: I want to start doing analytics on the network based on
 ### what is the optimal ratio of nearby nodes to far off nodes? http://en.wikipedia.org/wiki/Small-world_network
@@ -95,47 +102,36 @@ Having some kind of API to pull information of the network might be useful.
 also: I've been playing with sigmajs, but d3js.org looks like it has some really useful stuff
 http://christophermanning.org/projects/building-cubic-hamiltonian-graphs-from-lcf-notation/
 
-### Are there any other types of nodes I haven't addressed?
+## Are there any other types of nodes I haven't addressed?
 
-...
-
-
-### resources I have so far::
-    http://ansuz.syrinxist.org/share/ArceliarAMA/
-
+```IRC
 damn, u the best Arceliar <3
 
 I'm reading through the whitepaper now,
 
+<ansuz> ping for fixing routing: probably not magic
+<ansuz> probably not placebo
+<ansuz> Arceliar, what's your opinion on the matter ^^
+* Arceliar reads scrollback
+<ansuz> Alice can't find bob by browsing, Bob blasts pings at Alice, helps Alice find Bob
+<ansuz> -> starts working
+<Arceliar> ah
+<ansuz> as in, generic network traffic to encourage peer discovery
+<Arceliar> yeah. when alice receives a ping, she sees it's to a node that she doesn't have on her routing table yet. so she adds that node and the return route for the packet to the routing table.
+<Arceliar> i think something approximating that happens. may have changed during crashey.
+<ansuz> http://couch.syrinxist.org/share/fuck-yeah-l.png
+<Arceliar> right now the network depends a lot on forwarding. if neither alice nor bob have the other on their routing tables, then never find eachother (unless it's by accident) and just depend on the DHT to handle routing
+<Arceliar> if the DHT has problems (e.g. all the old nodes that haven't updated yet) then forwarded packets may vanish into a routing blackhole
+<frozen> ansuz: that image is as large as it is to troll, isn't it.
+<ansuz> lol
+<ansuz> maaaaybe
+<ansuz> umadbro?
+...
+<Arceliar> ideally, when we forward traffic, we'd keep the switch label from previous hops. so Alice->Eve->Bob would arrive at bob with Alice<-Eve and Eve<-Bob return labels attached, and Bob could splice a full route to Alice.
+<Arceliar> but to do that, we first need to be able to stack switch labels (which we need to do anyway because 64 bits won't be enough if there's 10 billion nodes in the network)
 
-> \<ansuz> ping for fixing routing: probably not magic
-> \<ansuz> probably not placebo
-> \<ansuz> Arceliar, what's your opinion on the matter ^^
-> * Arceliar reads scrollback
-> \<ansuz> Alice can't find bob by browsing, Bob blasts pings at Alice, helps Alice find Bob
-> \<ansuz> -> starts working
-> \<Arceliar> ah
-> \<ansuz> as in, generic network traffic to encourage peer discovery
-> <Arceliar> yeah. when alice receives a ping, she sees it's to a node that she doesn't have on her routing table yet. so she adds that node and the return route for the packet to the routing table.
-> \<Arceliar> i think something approximating that happens. may have changed during crashey.
-> \<ansuz> http://couch.syrinxist.org/share/fuck-yeah-l.png
-> <Arceliar> right now the network depends a lot on forwarding. if neither alice nor bob have the other on their routing tables, then never find eachother (unless it's by accident) and just depend on the DHT to handle routing
-> \<Arceliar> if the DHT has problems (e.g. all the old nodes that haven't updated yet) then forwarded packets may vanish into a routing blackhole
-\<frozen> ansuz: that image is as large as it is to troll, isn't it.
-> \<ansuz> lol
-> \<ansuz> maaaaybe
-> \<ansuz> umadbro?
-> ...
-> \<Arceliar> ideally, when we forward traffic, we'd keep the switch label from previous hops. so Alice->Eve->Bob would arrive at bob with Alice<-Eve and Eve<-Bob return labels attached, and Bob could splice a full route to Alice.
-> \<Arceliar> but to do that, we first need to be able to stack switch labels (which we need to do anyway because 64 bits won't be enough if there's 10 billion nodes in the network)
-
-> \<Arceliar> if Bob knows the Bob->Eve and Eve->Alice routes, he can splice Bob->Alice. but he's currently too stupid to ask for Eve->Alice.
-> \<Arceliar> and Eve is too stupid to include it in case he'd find it useful
-> \<Arceliar> at one point I had it set up so if Alice didn't know a route to Bob but tried to send a packet to him, she'd also trigger a search for him. which would get her a route. but it killed performance.
-> \<Arceliar> i mean... Alice would find a great route, but tons of spammed searches everywhere, so it wasn't worth the cost
-
-
-ANY MORE QUESTIONS?
-
-PLS PUT HERE. THX
-###################################################
+<Arceliar> if Bob knows the Bob->Eve and Eve->Alice routes, he can splice Bob->Alice. but he's currently too stupid to ask for Eve->Alice.
+<Arceliar> and Eve is too stupid to include it in case he'd find it useful
+<Arceliar> at one point I had it set up so if Alice didn't know a route to Bob but tried to send a packet to him, she'd also trigger a search for him. which would get her a route. but it killed performance.
+<Arceliar> i mean... Alice would find a great route, but tons of spammed searches everywhere, so it wasn't worth the cost
+```
