@@ -30,6 +30,7 @@
   + spaces ( )
   + tabs (\t)
   + curly braces ({,})
+  + `<@cjd> be careful of non a-zA-Z0-9_`
 * There may be more invalid characters, please let us know if you find any!
 * They can be generated in bash with the following one-liner:
 
