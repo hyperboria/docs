@@ -61,8 +61,10 @@ Instead of relying on external libraries, some utility functions have been re-im
 
 ## JSON
 
-TBC
+cjdns config files are typically stored as what the community often refers to as [cjdson](https://github.com/cjdson). As [finn](https://github.com/thefinn93) has pointed out, [comments](https://commentjson.readthedocs.org/en/latest/) [in json](https://www.npmjs.com/package/strip-json-comments) are [not unheard of](https://www.npmjs.com/package/json-comments).
+
+In any case, we're going to try to add some functionality to that repo that the others lack, such as _inserting fields without deleting comments_.
 
 ## Base32
 
-TBC
+[This Javascript library](https://github.com/ansuz/fc00.org/blob/master/scripts/keys/cjdb32.js) is a direct translation of [the cjdns base32 encoder written in C](https://github.com/cjdelisle/cjdns/blob/master/util/Base32.h#L109)
