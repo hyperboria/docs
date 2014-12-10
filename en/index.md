@@ -8,6 +8,6 @@ Here's some documentation we've been working on. Feel free to fork us and [add s
 * [Mesh Local Intro](meshlocals/intro.md)
  * [Existing Meshlocals](meshlocals/existing/index.md)
  * [Starting Your Own](meshlocals/diy.md)
-* Notes
+* [Notes](notes/index.md)
  * [ansuz' Q&A with Arceliar](notes/arc-workings.md)
  * [cjdns-core](notes/cjdns-core.md)
