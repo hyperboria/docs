@@ -45,7 +45,7 @@ TBC
 
 # Cryptography
 
-Cryptography provides core functionality within cjdns. Here we will describe some of the cryptographic functions performed within cjdns and implementation details.
+Cryptography provides core functionality within cjdns. [Here](cryptography.md) we will describe some of the cryptographic functions performed within cjdns and implementation details.
 
 ## Public Keys
 
