@@ -9,3 +9,6 @@
 * the build system :(
 * in the media
 * FAQ
+* Known bugs && their circumstances
+  + Black Hole Routing (may actually be several bugs)
+  + Failure to reestablish connection after disconnect/ipv4 change
