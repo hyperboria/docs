@@ -25,3 +25,9 @@ If you're located somewhere extremely remote, you don't have to count yourself o
 Read as much documentation as you can, and familiarize yourself with the software so that if someone does contact you, you have some knowledge to share. If you find any documentation that's unclear or misleading, get in touch with us and help to [write the fine manual](http://roaming-initiative.com/blog/posts/wtfm).
 
 Finally, ask around for someone willing to peer with you despite the distance, but be patient. As time goes by and you find closer peers, disable the connections to those who are further away.
+
+## About Wifi tuning
+
+Antenna directionality, Signal to Noise ratio, beamforming: http://apenwarr.ca/log/?m=201408#01
+
+A guide to tuning your wifi for adverse conditions: http://kmkeen.com/linux-wifi/
