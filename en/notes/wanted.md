@@ -6,3 +6,4 @@
 * OpenWRT in en/
 * WiFi Recommendations in en/meshlocals/
 * cjdns/contrib/ scripts
+* the build system :(
