@@ -1,4 +1,4 @@
-#Ideas for new docs
+# Ideas for new docs
 
 * cjdns Installation in en/cjdns/
 * Physical Peering in en/cjdns/
@@ -7,3 +7,5 @@
 * WiFi Recommendations in en/meshlocals/
 * cjdns/contrib/ scripts
 * the build system :(
+* in the media
+* FAQ
