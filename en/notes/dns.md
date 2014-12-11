@@ -166,231 +166,232 @@ Improvements
 
 
 
-DISCUSSION FROM hypeIRC/#webdev (edited and organized) // Kinda
+## discussion from hypeIRC/#webdev (edited and organized) // Kinda
 
-> \<ansuz> finn and I were talking about setting up dns for every meshlocal
-> \<ansuz> maybe changing .hype to .mesh
-> \<ansuz> so like, pad.toronto.mesh
-> \<ansuz> pad.seattle.mesh
-> \<lukevers> pad.internet.mesh
-> \<ansuz> rainflydns never happened
-> \<lukevers> dns is hard
->
-> \<ansuz> [parabolic] have 100% adoption of paraDNS
-> \<ansuz> if we merge that with hype records, we might have something useful, I see no reason not to
-> \<ansuz> and then eventually if we make something else, we can migrate all those records to it in one go (or just mirror them)
-> \<ansuz> something distributed, maybe?
-> \<qmx> lukevers: dns isn't hard, as long as you're fine with status quo
-> \<qmx> (centralized)
-> \<qmx> hypedns isn't viable
-> \<lukevers> yeah centralized is kind of an easy concept
->
->     \<qmx> rainfly won't fly
->
-> \<lukevers> decentralized is more what I meant
->
-> \<Igel> hey thats a kick in the nuts
-> \<Igel> if its a 2 year+ think , but the way i saw it and it was described to me
-> \<Igel> the docs distributed arent just quad records, they are arbitrary in his own words
-> \<Igel> think of some examples, eg; bitcoin addy, gpg prints
->
-> \<qmx> I still think we need to just have nodes advertising services over a dht discovery mesh
-> \<Igel> #Hypertary
-> \<Igel> workin on it
-> \<Igel> (soon)
-> \<qmx> and let gpg WOT assure I am qmx
->   # WOT == web of trust
->
-> \<ansuz> I'd really like it if we could just all use something, whatever it is
-> \<ansuz> so that there's progress, instead of competition
-> \<ansuz> not to say that they're mutually exclusive, but..
-> \<ansuz> we shouldn't have to use 3 dns services to access all the records
-> \<ansuz> I have more servers than I have things to host
-> \<ansuz> I'll install whatever people think is best and help mirror it
->
-> \<derp> we need open protocols, decentralizing everything only works if people actually use it. go lower, decentralize the procotol and let a user decide to self host or use a hosted service
-> \<derp> ironically, its the chicken and egg problem. We want users, but users expect services. How do we attract and retain users? Making them host everything themselves?
-> \<derp> the real beauty of cjdns is it solves network neutrality
-> \<derp> assuming we don't impose some crazy HOCNET shit
->
-> \<ansuz> I don't think everyone should have to serve dns records
-> \<ansuz> we don't have to go 100% distributed
-> \<prurigro> ansuz: so disapora-decentralized
-> \<qmx> ansuz: if you use a dht you can have a lite dns client and some nodes host the full dns
-> \<ansuz> but like, such that no one is in charge, I think that's what cjd was getting at with the nmc thing
-> \<qmx> ansuz: akin to multibit-bitcoin and bitcoind
-> \<ansuz> qmx, prurigro, yea
->
-> \<ansuz> we should have a hype tld, .mesh, .hype or something
-> \<derp> ansuz, cjd's nmc thing is way to hopeful. Its like he read Richard Stallmans dreams, but yeah, we need something *realistically better than the status quo*
-> \<prurigro> qmx: when did he propose that? his earlier ideas were more like bitcoin, with power in numbers
-> \<prurigro> (in terms of signage)
-> \<prurigro> oh hm, yeah, that doesn't sound open
-> \<qmx> prurigro: distributed but not that much
-> \<prurigro> one person getting hit by a bus should not be the end of domain names
-> \<qmx> prurigro: you would register via nmc
-> \<qmx> prurigro: then his rainflydns signs the record
-> \<ansuz> yea, that's silly
-> \<ansuz> there's issues with nmc anyway
-> \<ansuz> like changing records
-> \<ansuz> centralization means you don't wait so long for things to propogate
->
-> \<ansuz> local meshes should have something else
-> \<ansuz> toronto.mesh
-> \<ansuz> then toronto.mesh should issue ansuz.toronto.mesh
-> \<ansuz> and host all the toronto records..
->
-> \<derp> what about for the clearnet?
-> \<derp> do you also plan to have a clearnet site for the meshlocal?
-> \<ansuz> well, to attract new folks, you need a front porch
-> \<ansuz> I use clearnet.syrinxist.org for that
-> \<ansuz> but I'm gonna get something more obviously mesh related in the near future
-> \<ansuz> starting to get toronto people somewhat involved this summer
->
-> \<ansuz> I think this would be our best option, though
-> \<ansuz> let local meshes deal with their own local users
-> \<ansuz> if toronto.mesh goes offline, those people lose their records, unless they've made backups and are prepared to make the new service
-> \<ansuz> (which should have a git or something)
->
-> \<ansuz> centralization with redundancy is okay
-> \<ansuz> I think
-> \<ansuz> blockchains bring a lot of overhead
->
-> \<qmx> ansuz: not for this thing
-> \<qmx> if we can't have something fully decentralized, then just use standard DNS
-> \<prurigro> I always thought a subscription model would make sense
-> \<ansuz> that's what I'm saying
-> \<ansuz> you want to use the toronto namespace? subscribe to torontoDNS
->
->     ## my thought here is that ultimately we don't REALLY want to create services on hype for the whole planet to use..
->     ## our primary concern should be our meshlocal users, since that's what project meshnet is really about.
->     ## latency adds up over many hops, there's still black-holes..even if that goes away, there's bandwidth overhead to not browsing locally
->
->
-> \<prurigro> people register with proejctmeshnet, projectmeshnet provides one gateway
-> \<prurigro> they abuse it? drop them
-> \<ansuz> torontoDNS feeds mirrors its toronto records to the global .mesh/.para/.hype
-> \<prurigro> and everyone would register with a bunch of places to make sure one going currupt won't screw them over
->
-> \<qmx> ansuz: I still strongly believe we should model for each node being able to issue his own namespace
-> \<prurigro> kinda like drug dealers do on tor
-> \<ansuz> qmx, I agree, but until we have that, I think this is our best option
-> \<qmx> ansuz: we won't have that if we don't start building it
-> \<ansuz> we could build it while we have this in the meantime
-> \<ansuz> instead of competing over namespace
-> \<qmx> ansuz: just the mention of .mesh/.para/.hype/.diarrhea sounds like a dirty hack
-> \<ansuz> it's a better option than ICANN
-> \<ansuz> which gets used more than anything else on hype
-> \<ansuz> because there isn't a clear contender
->
-> \<prurigro> another idea I had, was a tld of 4 utf8 characters that are cryptographically tied to a combination of the name they're attached to and the ipv6
-> \<qmx> prurigro: make this 8 ascii chars
-> \<qmx> utf8 for names are a pita generally
-> \<prurigro> actually, what about 7
-> \<qmx> whatever
-> \<qmx> I like this idea a lot
-> \<prurigro> the average number of items the brain can store in one go
-> \<ansuz> I'm down
-> \<prurigro> (people vary from 5-9)
->
-> \<qmx> prurigro: tell me more about your idea
-> \<ansuz> is there any way we could easily tie that into regular dns?
-> \<ansuz> so we could roll it out without having to start from scratch?
-> \<ansuz> premature optimization blows
->
-> \<qmx> ansuz: I like cjd's idea of using .h as root
-> \<ansuz> maybe we can start with some clear specs, and then it doesn't have to be tied to one language's implementation?
-> \<ansuz> .h is fine by me
-> \<ansuz> anything is fine, imho
-> \<qmx> ansuz: gathering a set of reqs
-> \<qmx> into a document
->
-> \<qmx> then figuring out what can we build
-> \<prurigro> qmx: well, if the ipv6 is 0:0:0:0:0 and the domain is prurigro, the tld will be 7 numbers generated cryptographically based on both of those values, which an extremely small number of other ipv6 addresses would be able to combine with the domain to form
-> \<prurigro> kinda like how the ipv6 is cryptographically generated a much longer, but single source in cjdns
-> \<prurigro> (the pubkey)
-> \<prurigro> and a word + 7 characters is infinitely more remembreable than an ipv6
-> \<qmx> so I could technically have blog.fcea93
-> \<ansuz> don't you then have to change your domain if you change your cjdns conf?
-> \<ansuz> change/lose
-> \<qmx> ansuz: but then this is your problem, amirite
-> \<ansuz> yea
-> \<qmx> "don't be stupid"
-> \<prurigro> and it'd be the number of ipv6 addresses dividided by 36^7 of all ipv6 addresses that would be able to spoof
-> \<qmx> "friends don't let friends lose their private keys"
-> \<ansuz> I've been good about it, but it would be nice if, say, all my nodes had one tld
-> \<ansuz> easy to tell that *.ansuz all belongs to me
-> \<qmx> I still think a blockchain with proof of work would be nice
-> \<qmx> being the proof-of-work something that gives back to the network
-> \<ansuz> harder to tell that it's me if anyone can make ansuz.235gdj
-> \<qmx> ansuz: I agree
->
-> \<qmx> prurigro: I think it's a must for one to be able to secure a domain
-> \<qmx> and this is what makes everything harder
-> \<ansuz> so what about meeting in the middle?
-> \<ansuz> if we have tlds, but you have a crypto proof (optionally) in the subdomain?
-> \<ansuz> lkjdsgj32.ansuz.toronto.mesh
-> \<ansuz> or just ansuz.toronto.mesh
-> \<ansuz> mesh is for all of hype, toronto is dependent on torontoDNS, I completely administrate *.ansuz.*
-> \<qmx> ansuz: I still don't want a 3rd party controlling my domain names
-> \<ansuz> I don't see how we can get around it unless you want all of your users to point to your own nameserver
-> \<prurigro> qmx: yeah, the whole angle I was trying to think from when I came up with the idea I just suggested was in the hopes that dns could be almost as freeform as ipv6
->
-> \<ansuz> but I agree, I'd prefer not to
-> \<prurigro> there might be a better way to go about doing that, but this is the optimal solution imo
-> \<prurigro> (someone can imagine up an domain and it simply belongs to them, because noone else could have it)
-> \<ansuz> that's not too different from raw ipv6s, though
-> \<prurigro> then, your packet bounces around until someone says they know "ansuz.285w92" + has the correct ip6
-> \<ansuz> except they're shorter
-> \<qmx> what about crossing gpg wot and names?
->
-> \<prurigro> ansuz: it'd be verified against the ip6, and considered less secure but more convenient
-> \<prurigro> as an option
->
-> \<ansuz> i'm in favour of gpg
-> \<qmx> which incidentally means if enough people sign I'm qmx I'm qmx
->
-> \<ansuz> I'll sign ;)
->
-> \<qmx> that's the thing
-> \<qmx> you can have more than one entry for a record
->
-> \<ansuz> signing is better than blockchain
-> \<ansuz> for overhead, I would think
->
-> \<qmx> I advertise I provide the qmx namespace, you can check all the signatures
-> \<qmx> if a spoofer tries to provide qmx too, it's up to you to trust his
-> \<qmx> since cjdns is built upon "know thy peers"
->
-> \<ansuz> gets people to think more about gpg
-> \<ansuz> and trust
-> \<ansuz> which is good
-> \<qmx> we start growing the web of trust
->
-> \<ansuz> can we do this on top of an existing protocol?
-> \<ansuz> since I think most people will agree that NIH is problematic
-> \<qmx> I'm way more likely to trust something derp signed than something that (what was the name of the crazy one we trolled at #hyperboria?)
-> \<qmx> ansuz: the client allows you to decide, and sign the records you trust
->
-> \<qmx> \<unicode node glyph>
-> \<qmx> note*
-> \<ansuz> hehe, like my /whoami ?
-> \<qmx> â™«
-> \<ansuz> did you see that, qmx?
-> \<ansuz> so, requirements..
-> \<ansuz> it should be short
-> \<qmx> example
->
-> \<qmx> dig blog.qmx
-> \<qmx> returns blog.qmx.chooser.h
-> \<qmx> if you visit this it'll present you the records that match this tld and the sigs
-> \<qmx> this page is provided by your dns client daemon
-> \<qmx> which runs almost "inside" cjdns
->
-> \<jackv> but the key is that you need to trust someone, once you have that, cjdns makes it possible to trust all the traffic coming from him as his own
-> \<jackv> thus the problem here is finding someone (or multiple nodes) that you personally trust
-> \<jackv> and "trust" could be defined as, their records agree with all 10 of the servers in my area
-> \<jackv> a random sample of domains resolves the same with them as with a majority of the rest
-> \<jackv> not everyone has to run one
-> \<jackv> just make setting one up easy enough
-> \<jackv> just like mail servers :)
+```irc
+
+<ansuz> finn and I were talking about setting up dns for every meshlocal
+<ansuz> maybe changing .hype to .mesh
+<ansuz> so like, pad.toronto.mesh
+<ansuz> pad.seattle.mesh
+<lukevers> pad.internet.mesh
+<ansuz> rainflydns never happened
+<lukevers> dns is hard
+
+<ansuz> [parabolic] have 100% adoption of paraDNS
+<ansuz> if we merge that with hype records, we might have something useful, I see no reason not to
+<ansuz> and then eventually if we make something else, we can migrate all those records to it in one go (or just mirror them)
+<ansuz> something distributed, maybe?
+<qmx> lukevers: dns isn't hard, as long as you're fine with status quo
+<qmx> (centralized)
+<qmx> hypedns isn't viable
+<lukevers> yeah centralized is kind of an easy concept
+
+<qmx> rainfly won't fly
+
+<lukevers> decentralized is more what I meant
+
+<Igel> hey thats a kick in the nuts
+<Igel> if its a 2 year+ think , but the way i saw it and it was described to me
+<Igel> the docs distributed arent just quad records, they are arbitrary in his own words
+<Igel> think of some examples, eg; bitcoin addy, gpg prints
+
+<qmx> I still think we need to just have nodes advertising services over a dht discovery mesh
+<Igel> #Hypertary
+<Igel> workin on it
+<Igel> (soon)
+<qmx> and let gpg WOT assure I am qmx # WOT == web of trust
+
+<ansuz> I'd really like it if we could just all use something, whatever it is
+<ansuz> so that there's progress, instead of competition
+<ansuz> not to say that they're mutually exclusive, but..
+<ansuz> we shouldn't have to use 3 dns services to access all the records
+<ansuz> I have more servers than I have things to host
+<ansuz> I'll install whatever people think is best and help mirror it
+
+<derp> we need open protocols, decentralizing everything only works if people actually use it. go lower, decentralize the procotol and let a user decide to self host or use a hosted service
+<derp> ironically, its the chicken and egg problem. We want users, but users expect services. How do we attract and retain users? Making them host everything themselves?
+<derp> the real beauty of cjdns is it solves network neutrality
+<derp> assuming we don't impose some crazy HOCNET shit
+
+<ansuz> I don't think everyone should have to serve dns records
+<ansuz> we don't have to go 100% distributed
+<prurigro> ansuz: so disapora-decentralized
+<qmx> ansuz: if you use a dht you can have a lite dns client and some nodes host the full dns
+<ansuz> but like, such that no one is in charge, I think that's what cjd was getting at with the nmc thing
+<qmx> ansuz: akin to multibit-bitcoin and bitcoind
+<ansuz> qmx, prurigro, yea
+
+<ansuz> we should have a hype tld, .mesh, .hype or something
+<derp> ansuz, cjd's nmc thing is way to hopeful. Its like he read Richard Stallmans dreams, but yeah, we need something *realistically better than the status quo*
+<prurigro> qmx: when did he propose that? his earlier ideas were more like bitcoin, with power in numbers
+<prurigro> (in terms of signage)
+<prurigro> oh hm, yeah, that doesn't sound open
+<qmx> prurigro: distributed but not that much
+<prurigro> one person getting hit by a bus should not be the end of domain names
+<qmx> prurigro: you would register via nmc
+<qmx> prurigro: then his rainflydns signs the record
+<ansuz> yea, that's silly
+<ansuz> there's issues with nmc anyway
+<ansuz> like changing records
+<ansuz> centralization means you don't wait so long for things to propogate
+
+<ansuz> local meshes should have something else
+<ansuz> toronto.mesh
+<ansuz> then toronto.mesh should issue ansuz.toronto.mesh
+<ansuz> and host all the toronto records..
+
+<derp> what about for the clearnet?
+<derp> do you also plan to have a clearnet site for the meshlocal?
+<ansuz> well, to attract new folks, you need a front porch
+<ansuz> I use clearnet.syrinxist.org for that
+<ansuz> but I'm gonna get something more obviously mesh related in the near future
+<ansuz> starting to get toronto people somewhat involved this summer
+
+<ansuz> I think this would be our best option, though
+<ansuz> let local meshes deal with their own local users
+<ansuz> if toronto.mesh goes offline, those people lose their records, unless they've made backups and are prepared to make the new service
+<ansuz> (which should have a git or something)
+
+<ansuz> centralization with redundancy is okay
+<ansuz> I think
+<ansuz> blockchains bring a lot of overhead
+
+<qmx> ansuz: not for this thing
+<qmx> if we can't have something fully decentralized, then just use standard DNS
+<prurigro> I always thought a subscription model would make sense
+<ansuz> that's what I'm saying
+<ansuz> you want to use the toronto namespace? subscribe to torontoDNS
+
+     ## my thought here is that ultimately we don't REALLY want to create services on hype for the whole planet to use..
+     ## our primary concern should be our meshlocal users, since that's what project meshnet is really about.
+     ## latency adds up over many hops, there's still black-holes..even if that goes away, there's bandwidth overhead to not browsing locally
+
+<prurigro> people register with proejctmeshnet, projectmeshnet provides one gateway
+<prurigro> they abuse it? drop them
+<ansuz> torontoDNS feeds mirrors its toronto records to the global .mesh/.para/.hype
+<prurigro> and everyone would register with a bunch of places to make sure one going currupt won't screw them over
+
+<qmx> ansuz: I still strongly believe we should model for each node being able to issue his own namespace
+<prurigro> kinda like drug dealers do on tor
+<ansuz> qmx, I agree, but until we have that, I think this is our best option
+<qmx> ansuz: we won't have that if we don't start building it
+<ansuz> we could build it while we have this in the meantime
+<ansuz> instead of competing over namespace
+<qmx> ansuz: just the mention of .mesh/.para/.hype/.diarrhea sounds like a dirty hack
+<ansuz> it's a better option than ICANN
+<ansuz> which gets used more than anything else on hype
+<ansuz> because there isn't a clear contender
+
+<prurigro> another idea I had, was a tld of 4 utf8 characters that are cryptographically tied to a combination of the name they're attached to and the ipv6
+<qmx> prurigro: make this 8 ascii chars
+<qmx> utf8 for names are a pita generally
+<prurigro> actually, what about 7
+<qmx> whatever
+<qmx> I like this idea a lot
+<prurigro> the average number of items the brain can store in one go
+<ansuz> I'm down
+<prurigro> (people vary from 5-9)
+
+<qmx> prurigro: tell me more about your idea
+<ansuz> is there any way we could easily tie that into regular dns?
+<ansuz> so we could roll it out without having to start from scratch?
+<ansuz> premature optimization blows
+
+<qmx> ansuz: I like cjd's idea of using .h as root
+<ansuz> maybe we can start with some clear specs, and then it doesn't have to be tied to one language's implementation?
+<ansuz> .h is fine by me
+<ansuz> anything is fine, imho
+<qmx> ansuz: gathering a set of reqs
+<qmx> into a document
+
+<qmx> then figuring out what can we build
+<prurigro> qmx: well, if the ipv6 is 0:0:0:0:0 and the domain is prurigro, the tld will be 7 numbers generated cryptographically based on both of those values, which an extremely small number of other ipv6 addresses would be able to combine with the domain to form
+<prurigro> kinda like how the ipv6 is cryptographically generated a much longer, but single source in cjdns
+<prurigro> (the pubkey)
+<prurigro> and a word + 7 characters is infinitely more remembreable than an ipv6
+<qmx> so I could technically have blog.fcea93
+<ansuz> don't you then have to change your domain if you change your cjdns conf?
+<ansuz> change/lose
+<qmx> ansuz: but then this is your problem, amirite
+<ansuz> yea
+<qmx> "don't be stupid"
+<prurigro> and it'd be the number of ipv6 addresses dividided by 36^7 of all ipv6 addresses that would be able to spoof
+<qmx> "friends don't let friends lose their private keys"
+<ansuz> I've been good about it, but it would be nice if, say, all my nodes had one tld
+<ansuz> easy to tell that *.ansuz all belongs to me
+<qmx> I still think a blockchain with proof of work would be nice
+<qmx> being the proof-of-work something that gives back to the network
+<ansuz> harder to tell that it's me if anyone can make ansuz.235gdj
+<qmx> ansuz: I agree
+
+<qmx> prurigro: I think it's a must for one to be able to secure a domain
+<qmx> and this is what makes everything harder
+<ansuz> so what about meeting in the middle?
+<ansuz> if we have tlds, but you have a crypto proof (optionally) in the subdomain?
+<ansuz> lkjdsgj32.ansuz.toronto.mesh
+<ansuz> or just ansuz.toronto.mesh
+<ansuz> mesh is for all of hype, toronto is dependent on torontoDNS, I completely administrate *.ansuz.*
+<qmx> ansuz: I still don't want a 3rd party controlling my domain names
+<ansuz> I don't see how we can get around it unless you want all of your users to point to your own nameserver
+<prurigro> qmx: yeah, the whole angle I was trying to think from when I came up with the idea I just suggested was in the hopes that dns could be almost as freeform as ipv6
+
+<ansuz> but I agree, I'd prefer not to
+<prurigro> there might be a better way to go about doing that, but this is the optimal solution imo
+<prurigro> (someone can imagine up an domain and it simply belongs to them, because noone else could have it)
+<ansuz> that's not too different from raw ipv6s, though
+<prurigro> then, your packet bounces around until someone says they know "ansuz.285w92" + has the correct ip6
+<ansuz> except they're shorter
+<qmx> what about crossing gpg wot and names?
+
+<prurigro> ansuz: it'd be verified against the ip6, and considered less secure but more convenient
+<prurigro> as an option
+
+<ansuz> i'm in favour of gpg
+<qmx> which incidentally means if enough people sign I'm qmx I'm qmx
+
+<ansuz> I'll sign ;)
+
+<qmx> that's the thing
+<qmx> you can have more than one entry for a record
+
+<ansuz> signing is better than blockchain
+<ansuz> for overhead, I would think
+
+<qmx> I advertise I provide the qmx namespace, you can check all the signatures
+<qmx> if a spoofer tries to provide qmx too, it's up to you to trust his
+<qmx> since cjdns is built upon "know thy peers"
+
+<ansuz> gets people to think more about gpg
+<ansuz> and trust
+<ansuz> which is good
+<qmx> we start growing the web of trust
+
+<ansuz> can we do this on top of an existing protocol?
+<ansuz> since I think most people will agree that NIH is problematic
+<qmx> I'm way more likely to trust something derp signed than something that (what was the name of the crazy one we trolled at #hyperboria?)
+<qmx> ansuz: the client allows you to decide, and sign the records you trust
+
+<qmx<unicode node glyph>
+<qmx> note*
+<ansuz> hehe, like my /whoami ?
+<qmx> â™«
+<ansuz> did you see that, qmx?
+<ansuz> so, requirements..
+<ansuz> it should be short
+<qmx> example
+
+<qmx> dig blog.qmx
+<qmx> returns blog.qmx.chooser.h
+<qmx> if you visit this it'll present you the records that match this tld and the sigs
+<qmx> this page is provided by your dns client daemon
+<qmx> which runs almost "inside" cjdns
+
+<jackv> but the key is that you need to trust someone, once you have that, cjdns makes it possible to trust all the traffic coming from him as his own
+<jackv> thus the problem here is finding someone (or multiple nodes) that you personally trust
+<jackv> and "trust" could be defined as, their records agree with all 10 of the servers in my area
+<jackv> a random sample of domains resolves the same with them as with a majority of the rest
+<jackv> not everyone has to run one
+<jackv> just make setting one up easy enough
+<jackv> just like mail servers :)
+```
