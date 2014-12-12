@@ -25,7 +25,7 @@ We're seeing three processes.
   - The `--nobg` switch is equivalent to setting `"noBackground": 1` in `cjdroute.conf`.
   - If we omit `--nobg`, we will see a bit of log output from cjdns' starting up. Then the process will exit and cjdns will continue to run in the background.
 2. The Angel process
-  - Child of process 1
+  - Child of the process we started
   - If we omit `--nobg`, it will get re-parented to pid 1 (usually `init`.)
   - Reponsible for system integration -- bind sockets, create TUN interface, etc.
 3. The Core process
@@ -54,7 +54,7 @@ We're seeing a couple of listening UDP ports.
 
 1. [Admin API](admin.md)
 2. UDPInterface on my local docker0 bridge
-3. UDPInterface listening on all interfaces
+3. Default UDPInterface listening on all interfaces
 4. RainflyClient, which is dead code (admin/angel/Core.c:439 ff.)
 
 
