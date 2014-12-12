@@ -37,3 +37,9 @@
 ```Bash
 cat /dev/urandom | strings | head -n 50 | tr -d '\n"`\\ \t'  | head -c 50 && echo OR tr -cd '[:alnum:]' < /dev/urandom | fold -w32 | head -n20`
 ```
+
+* On OpenWrt, the following shorter one-liner is used:
+
+```Bash
+tr -cd 'A-Za-z0-9' 2> /dev/null < /dev/urandom | head -n 20
+```
