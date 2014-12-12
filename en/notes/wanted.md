@@ -5,7 +5,6 @@
 * Internet Tunneling/Peering in en/cjdns/
 * Security mechanisms (seccomp, angel/core, etc.) in en/cjdns/
 * Admin API in en/cjdns/
-* OpenWRT in en/
 * WiFi Recommendations in en/meshlocals/
 * cjdns/contrib/ scripts
 * the build system :(

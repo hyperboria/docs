@@ -6,6 +6,7 @@ Here's some documentation we've been working on. Feel free to fork us and [add s
  * [Anatomy of a running cjdns](cjdns/anatomy.md)
  * [Node Operator Guidelines](cjdns/Operator_Guidelines.md)
  * [nodeinfo.json](cjdns/nodeinfo-json.md)
+* [Commodity routers and OpenWrt](openwrt.md)
 * [Mesh Local Intro](meshlocals/intro.md)
  * [Existing Meshlocals](meshlocals/existing/index.md)
  * [Starting Your Own](meshlocals/diy.md)
