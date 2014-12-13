@@ -8,7 +8,6 @@
 * WiFi Recommendations in en/meshlocals/
 * cjdns/contrib/ scripts
 * the build system :(
-  + cjdns/do
   + cjdns/node_build/make.js
 * in the media
 * FAQ
