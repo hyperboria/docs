@@ -8,7 +8,7 @@
 
 * The public key is entirely dependent on the privateKey.
 * Represented internally as another 32 element Uint8 Array.
-* Represented in text form as a 52 character string of [cjdns' base32 encoding](https://github.com/ansuz/fc00.org/blob/master/scripts/keys/cjdb32.js).
+* Represented in text form as a 52 character string of [cjdns' base32 encoding](https://github.com/ansuz/cjdnsjs/blob/master/scripts/keys/cjdb32.js).
 * cjdns base32 consists of the following characters:
   + 0123456789bcdfghjklmnpqrstuvwxyz
 * Any string matching the following regex is **invalid** cjdns base32
