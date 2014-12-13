@@ -14,3 +14,4 @@ Here's some documentation we've been working on. Feel free to fork us and [add s
  * [ansuz' Q&A with Arceliar](notes/arc-workings.md)
  * [cjdns-core](notes/cjdns-core.md)
  * [cryptography](notes/cryptography.md)
+ * [cjdns/do](notes/do.md)
