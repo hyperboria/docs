@@ -8,7 +8,7 @@ To speak with those involved, join **HypeIRC/#documentation**
 
 ## Status
 
-ansuz has re-implemented the [xor metric](https://github.com/ansuz/fc00.org/tree/master/scripts/xor) and [key generation process](https://github.com/ansuz/fc00.org/tree/master/scripts/keys), along with the support functions involved, notably the implementation of Base32 used by cjdns.
+ansuz has re-implemented the [xor metric](https://github.com/ansuz/cjdnsjs/tree/master/scripts/xor) and [key generation process](https://github.com/ansuz/cjdnsjs/tree/master/scripts/keys), along with the support functions involved, notably the implementation of Base32 used by cjdns.
 
 [jph](https://hackworth.be/) is experimenting with writing a minimal, linux first implementation in golang, along with deconstructing everything involved in making that happen. He is also investigating TUN support in other languages (notably Python and ocaml).
 
@@ -67,4 +67,4 @@ In any case, we're going to try to add some functionality to that repo that the 
 
 ## Base32
 
-[This Javascript library](https://github.com/ansuz/fc00.org/blob/master/scripts/keys/cjdb32.js) is a direct translation of [the cjdns base32 encoder written in C](https://github.com/cjdelisle/cjdns/blob/master/util/Base32.h#L109)
+[This Javascript library](https://github.com/ansuz/cjdnsjs/blob/master/scripts/keys/cjdb32.js) is a direct translation of [the cjdns base32 encoder written in C](https://github.com/cjdelisle/cjdns/blob/master/util/Base32.h#L109)
