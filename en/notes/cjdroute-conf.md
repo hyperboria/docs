@@ -1,0 +1,37 @@
+# What does everything in your configuration file do?
+
+* privateKey
+* publicKey
+* ipv6
+* authorizedPasswords
+* admin
+  + bind
+  + password
+* interfaces
+  + UDPInterface
+    + bind
+    + connectTo
+  + ETHInterface
+    + bind
+    + beacon
+    + connectTo
+* router
+  + interface
+    * type
+  + ipTunnel
+    * allowedConnections
+      + publicKey
+      + ip4Address
+      + ip6Address
+    * outgoingConnections
+* resetAfterInactivitySeconds
+* security
+  + setuser
+  + exemptAngel
+* logging
+  + logTo
+* noBackground
+* dns
+  + keys
+  + servers
+  + minSignatures
