@@ -78,7 +78,7 @@ fc06:c135:28a5:8c0b:dd4e:bcb6:d4d6:c96d/128 ::   Un   0   2   254 lo
 
 We notice a few things about this TUN interface.
 
-1. The lack of a link encapsulation (e.g. Ethernet) or MAC address (`HWaddr`). The `tun0` interface isn't backed by a physical interfaces, as `eth0` or `wlan0` are. I's backed by a userland process instead (cjdroute).
+1. The lack of a link encapsulation (e.g. Ethernet) or MAC address (`HWaddr`). The `tun0` interface isn't backed by a physical interfaces, as `eth0` or `wlan0` are. It's backed by a userland process instead (cjdroute).
 2. The `inet` and `P-t-P` addresses, which are assigned by cjdns' tunneling functionality: [IPTunnel](iptunnel.md)
 3. The `RX` and `TX` values, which count the IP traffic received and transmitted by this cjdns node.
 
