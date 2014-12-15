@@ -1,11 +1,15 @@
 # Ideas for new docs
 
-* cjdns Installation in en/cjdns/
-* Physical Peering in en/cjdns/
-* Internet Tunneling/Peering in en/cjdns/
-* Security mechanisms (seccomp, angel/core, etc.) in en/cjdns/
-* Admin API in en/cjdns/
-* WiFi Recommendations in en/meshlocals/
+* cjdns Installation
+* Peering
+  + over UDP/IP
+  + over Ethernet
+  + over Wireless
+    - batman-adv and oslr?
+  + in datacenters (private networking)
+* Security mechanisms (seccomp, angel/core, etc.)
+* Admin API
+* WiFi Recommendations
 * cjdns/contrib/ scripts
 * the build system :(
   + cjdns/node_build/make.js
