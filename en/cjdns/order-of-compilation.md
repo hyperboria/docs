@@ -1,4 +1,4 @@
-Here is the order of compilation on Linux of `*.c` files when `./do` spawns `gcc` using '`-c`', '`-S`' or '`-E`':
+Here is the order of compilation on  my Linux box (3.13.0-43-generic #72-Ubuntu SMP x86_64) of `*.c` files when `./do` spawns `gcc` using '`-c`', '`-S`' or '`-E`':
 
 The top-most files were compiled first, and has the least number of dependencies. This listing includes the compilation of `cnacl` and `libuv` libraries included in the source tree.
 
