@@ -16,4 +16,4 @@ Here's some documentation we've been working on. Feel free to fork us and [add s
  * [cjdns-core](notes/cjdns-core.md)
  * [cryptography](notes/cryptography.md)
  * [cjdns/do](notes/do.md)
- * [the black hole bug](notes/black-whole.md)
+ * [the black hole bug](notes/black-hole.md)
