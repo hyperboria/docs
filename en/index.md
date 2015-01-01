@@ -3,6 +3,7 @@
 Here's some documentation we've been working on. Feel free to fork us and [add some pages!](notes/wanted.md)
 
 * [Intro](intro.md)
+ * [FAQ](faq/index.md)
  * [Anatomy of a running cjdns](cjdns/anatomy.md)
  * [Node Operator Guidelines](cjdns/Operator_Guidelines.md)
  * [nodeinfo.json](cjdns/nodeinfo-json.md)
@@ -15,3 +16,4 @@ Here's some documentation we've been working on. Feel free to fork us and [add s
  * [cjdns-core](notes/cjdns-core.md)
  * [cryptography](notes/cryptography.md)
  * [cjdns/do](notes/do.md)
+ * [the black hole bug](notes/black-whole.md)
