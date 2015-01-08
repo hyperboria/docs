@@ -1,8 +1,9 @@
 # Ideas for new docs
 
-* cjdns Installation
+* cjdns
   + breakdown of 3 parts of cjdns as explained in the [whitepaper](https://github.com/cjdelisle/cjdns/blob/master/doc/Whitepaper.md)
   + how to [cjdroute.conf](https://wiki.projectmeshnet.org/Cjdroute.conf)
+  + Admin API
 * Peering
   + generating and transferring credentials
   + over UDP/IP
@@ -15,9 +16,12 @@
   + in datacenters (private networking)
   + over iodine
 * Security mechanisms (seccomp, angel/core, etc.)
-* Admin API
 * WiFi Recommendations
 * cjdns/contrib/ scripts
+  + dumpTable
+  + systemd/upstart
+  + peerStats
+  + python/cjdnsadminmaker
 * the build system :(
   + cjdns/node_build/make.js
 * in the media
