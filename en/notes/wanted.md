@@ -1,7 +1,8 @@
 # Ideas for new docs
 
 * cjdns Installation
-  + how to [conf](https://wiki.projectmeshnet.org/Cjdroute.conf)
+  + breakdown of 3 parts of cjdns as explained in the [whitepaper](https://github.com/cjdelisle/cjdns/blob/master/doc/Whitepaper.md)
+  + how to [cjdroute.conf](https://wiki.projectmeshnet.org/Cjdroute.conf)
 * Peering
   + generating and transferring credentials
   + over UDP/IP
@@ -22,5 +23,13 @@
 * in the media
 * FAQ
   + My service doesn't like ipv6. how can I get it to run on hype? [6tunnel?](http://toxygen.net/6tunnel/)
+  + How can I help?
+    * documentation!
+    * coding
+      - C - help build cjdroute!
+      - [Android](https://github.com/berlinmeshnet/cjdns-android)
+      - Go - help jph build zlarkd!
+      - Windows/CrossPlatform devs - Help us make cjdns portable to *all* the devices!
+  + Jargon file
 * Known bugs && their circumstances
   + Failure to reestablish connection after disconnect/ipv4 change
