@@ -22,6 +22,12 @@
   + systemd/upstart
   + peerStats
   + python/cjdnsadminmaker
+* Not really contrib, but still helpful
+  + cjdcmd
+  + cjdmaid
+  + cjdcmd-ng
+  + fc00.org
+  + tcjdns (ask prurigro)
 * the build system :(
   + cjdns/node_build/make.js
 * in the media
