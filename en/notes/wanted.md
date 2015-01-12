@@ -6,7 +6,7 @@
   + Admin API
 * Peering
   + generating and transferring credentials
-  + <DEL>over UDP/IP</DEL>
+  + ~~over UDP/IP~~
   + over Ethernet
   + over Wireless
     - [batman-adv](http://www.open-mesh.org/projects/open-mesh/wiki)
