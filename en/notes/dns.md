@@ -395,3 +395,110 @@ Improvements
 <jackv> just make setting one up easy enough
 <jackv> just like mail servers :)
 ```
+
+## DNS, with trust based on peering-like agreements
+
+Codename *lgdns*
+
+```
+<larsg> jercos: do you have any spontaneous thought re: web-of-trust-based dns on top of cjdns peers?
+<jercos> larsg: cryptographic identities float right near the top of course, a response coming from an address is enough to trust that address as the source of the information contained therin
+<jercos> uh
+<larsg> it just seems so simple
+<larsg> a mere ui problem
+<jercos> yeah... seperating levels of trust is a thing though
+<jercos> in an all-or-nothing trust system, the node with the highest trust level "wins" any conflicts, so your friend bob can send you a fake version of google.hype
+<jercos> which means your friend bob is now a central point of failure for you, and you now trust that his machine is completely malware free
+<jercos> ditto for *every* person you place at a higher level of trust than the original source for the google.hype that you expect to travel to
+<larsg> just realize that what i'm thinking of is basically 1) a bit of glue around rainflyclient, and 2) rainflyserver on $every node
+<larsg> yeah i get what you mean, you don't wanna roam into a rogue network and suddenly get fake answers
+<larsg> if peers would be able to delegate the trust placed in them to other nodes, we could even do something similar to geoip-based dns
+<larsg> not with coordinates as metric, obsly
+<jercos> yup. possibly using DHT coordinates.
+<larsg> yeah the server you're asking would delegate to another server (which it trusts) which is close to you
+<larsg> instead of just blindly trusting every current peer, there could be a simple trust list of a few nodes
+<larsg> and a means of seeding that list
+<larsg> "You can't resolve domain names yet. Which of your peers or other nodes do you want to trust with resolution? [list of peers] [ipv6 address] [search]
+<jercos> I'm headed homeward, I'll think on this on the drive :)
+<larsg> safe ride!
+
+<cjd> I've thought about some ideas like that
+<larsg> i should spec that out a bit more, so that someone looking for work can understand it
+<larsg> did you come with possible problems?
+<cjd> I killed a few ideas off
+<cjd> what if we just make a rule that we'll pull any changes to the db as long as they match the requirements and come from someone you trust
+<cjd> requirements: can't hijack a domain which is already regged
+<cjd> that's arguably a tragedy of the commons though since everyone will race to create new domains as fast as those connected to them will allow
+<larsg> that description is a lot more concise, thnx
+<cjd> in this context, trust is binary
+<cjd> I add your node to the list -> I trust you absolutely
+<cjd> I'll pull anything you offer
+<cjd> like bgp
+<larsg> or just for .com domains, or just for names matching /f.*ck/
+<cjd> what's wrong with  firetruck.hype ?
+<larsg> :]
+<cjd> and why not match against flappingcuntlips ?
+<cjd> or  throw-the-jew-down-the-well.hype
+<cjd> if you're going to censor, you have a duty to do it right ;)
+<larsg> de-peer
+<larsg> err, untrust
+<cjd> hmm
+<cjd> the way I imagined it, there's no clear way to drop a domain once it's registered
+<cjd> except for blocking it from being regged again and waiting for it to expire
+<larsg> yeah but "registered" is relative to whom you trust
+<cjd> meh that won't work
+<cjd> you have to reach consensus
+<larsg> y?
+<cjd> b/c all (working) dns does
+<cjd> if you rely on trust to determine what is the truth, you're going to have problems
+<larsg> you only need your own local truth
+<larsg> which you can make up of others' truths
+<larsg> local communities could offer trust lists to their members
+<larsg> and mutual trust could be established similar to how peering is established
+<larsg> in terms of the social process
+<larsg> mutual trust between communities, i mean.
+<larsg> don't like what your community thinks about how .com should be resolved?
+<larsg> tweak the community's default trust list
+<cjd> ok so you're actually thinking of doing the whole internet
+<larsg> cacert for dns i guess, with different tech underneath
+<larsg> useless without the community around it
+<larsg> just like cjdns
+<cjd> well you could write some sort of a rules engine for defining the domains
+<cjd> keep in mind though that it goes against how domains are normally registered
+<cjd> err
+<cjd> looked up
+<larsg> most communities and individuals will want to resolve icann domains the icann way
+<cjd> well you could write a rule like   .com -> 4.2.2.1
+<cjd> .net -> 8.8.8.8
+<cjd> penis.com -> 123.45.67.8   (if you reject how icann is handling it)
+<cjd> or you could just say . -> fc00:.....friend
+<cjd> hmm
+<cjd> when a node spins up, if it has no dns config it could just pull from it's nearest peer
+<larsg> or it'd "ask what do to do"
+<cjd> asking is a sin
+<larsg> yep indeed
+<cjd> just search for the nearest node which is offering dns results
+<larsg> FBI_Surveillance_Van_3
+<larsg> or do you mean search in the dht?
+<cjd> search the dht
+<cjd> surveillence van will still fuck you, it just needs to be running cjdns
+<larsg> that'd be a sensible default i guess
+<cjd> but that's kind of the rule
+<cjd> the van always wins
+<cjd> unless you do a big public key signing shitfest
+<larsg> if you're peering with someone over bluetooth (e.g. an android app that shares the .apk via bt), you'd likely also wanna take their dns
+<larsg> so having multiple options there would useful
+<larsg> AnotherInterface
+<cjd> tor uses a list of 8 directory servers
+<cjd> search the DHT for a directory server
+<cjd> kind of rainfly method
+<cjd> but directory servers die and stuff
+<cjd> not so resilient
+<larsg> on the peer level it's resilient though
+<cjd> ehh zzz
+<cjd> tomorrow
+<larsg> k :)
+<larsg> good night!
+<larsg> thanks for the thoughts
+<larsg> ... and so lgdns was born
+```
