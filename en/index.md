@@ -12,12 +12,18 @@ Here's some documentation we've been working on. Feel free to fork us and [add s
 * [Mesh Local Intro](meshlocals/intro.md)
  * [Existing Meshlocals](meshlocals/existing/index.md)
  * [Starting Your Own](meshlocals/diy.md)
-* [Notes](notes/index.md)
- * [ansuz' Q&A with Arceliar](notes/arc-workings.md)
- * [cjdns-core](notes/cjdns-core.md)
- * [cryptography](notes/cryptography.md)
- * [cjdns/do](notes/do.md)
 * Known Bugs
  * [Black Hole](bugs/black-hole.md)
  * [Hidden Peers](bugs/hidden-peers.md)
  * [Secret Santa](bugs/santa.md)
+
+These notes are unstructured and possibly outdated:
+
+* [Notes](notes/index.md)
+ * [Wanted docs](notes/wanted.md)
+ * [ansuz' Q&A with Arceliar](notes/arc-workings.md)
+ * [cjdns-core](notes/cjdns-core.md)
+ * [cryptography](notes/cryptography.md)
+ * [cjdroute.conf](notes/cjdroute.md)
+ * [cjdns/do](notes/do.md)
+ * [DNS ideas](notes/dns.md)
