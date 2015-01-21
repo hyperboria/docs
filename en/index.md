@@ -3,7 +3,8 @@
 Here's some documentation we've been working on. Feel free to fork us and [add some pages!](notes/wanted.md)
 
 * [Intro](intro.md)
- * [FAQ](faq/index.md)
+ * [General FAQ](faq/general.md)
+ * [Peering FAQ](faq/peering.md)
  * [Changelog for cjdns](cjdns/changelog.md)
  * [Anatomy of a running cjdns](cjdns/anatomy.md)
  * [Node Operator Guidelines](cjdns/Operator_Guidelines.md)
@@ -19,12 +20,11 @@ Here's some documentation we've been working on. Feel free to fork us and [add s
 
 These notes are unstructured and possibly outdated:
 
-* [Notes](notes/index.md)
- * [Interesting links](notes/links.md)
- * [Wanted docs](notes/wanted.md)
- * [ansuz' Q&A with Arceliar](notes/arc-workings.md)
- * [cjdns-core](notes/cjdns-core.md)
- * [cryptography](notes/cryptography.md)
- * [cjdroute.conf](notes/cjdroute.md)
- * [cjdns/do](notes/do.md)
- * [DNS ideas](notes/dns.md)
+* [Interesting links](notes/links.md)
+* [Wanted docs](notes/wanted.md)
+* [ansuz' Q&A with Arceliar](notes/arc-workings.md)
+* [cjdns-core](notes/cjdns-core.md)
+* [cryptography](notes/cryptography.md)
+* [cjdroute.conf](notes/cjdroute.md)
+* [cjdns/do](notes/do.md)
+* [DNS ideas](notes/dns.md)
