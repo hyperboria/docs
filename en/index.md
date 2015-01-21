@@ -1,4 +1,4 @@
-# Project Meshnet
+# Project Meshnet Documentation
 
 Here's some documentation we've been working on. Feel free to fork us and [add some pages!](notes/wanted.md)
 
@@ -18,10 +18,9 @@ Here's some documentation we've been working on. Feel free to fork us and [add s
  * [Hidden Peers](bugs/hidden-peers.md)
  * [Secret Santa](bugs/santa.md)
 
-These notes are unstructured and possibly outdated:
+## These notes are unstructured and possibly outdated:
 
 * [Interesting links](notes/links.md)
-* [Wanted docs](notes/wanted.md)
 * [ansuz' Q&A with Arceliar](notes/arc-workings.md)
 * [cjdns-core](notes/cjdns-core.md)
 * [cryptography](notes/cryptography.md)
