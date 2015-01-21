@@ -20,6 +20,7 @@ Here's some documentation we've been working on. Feel free to fork us and [add s
 These notes are unstructured and possibly outdated:
 
 * [Notes](notes/index.md)
+ * [Interesting links](notes/links.md)
  * [Wanted docs](notes/wanted.md)
  * [ansuz' Q&A with Arceliar](notes/arc-workings.md)
  * [cjdns-core](notes/cjdns-core.md)
