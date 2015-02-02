@@ -15,8 +15,8 @@ Here's some documentation we've been working on. Feel free to fork us and [add s
  * [Starting Your Own](meshlocals/diy.md)
 * Known Bugs
  * [Black Hole](bugs/black-hole.md)
- * [Hidden Peers](bugs/hidden-peers.md)
  * [Secret Santa](bugs/santa.md)
+ * ~~Hidden Peers~~
 
 ## These notes are unstructured and possibly outdated:
 
