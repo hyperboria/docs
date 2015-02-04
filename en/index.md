@@ -33,3 +33,5 @@ Here's some documentation we've been working on. Feel free to fork us and [add s
 ...Though you may not think to look in all the places it's stored.
 
 [This document](https://github.com/lgierth/cjdns/blob/docs/docs/index.md) includes an index of those files.
+
+See also [tips and tricks](tipsAndTricks.md)
