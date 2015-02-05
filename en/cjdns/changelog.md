@@ -16,7 +16,19 @@ master since: 97161a5 - shitfuck missed a line (Thu Jan 29 19:25:39 2015 +0100)
 crashey since: 670b047 - Fixed bug in getPeers which caused it to return the same peers every time (Sun Jan 18 17:13:53 2015 +0100)
 master since: 601b6cd - Oops, lets bump the version while we're at it (Fri Jan 23 07:47:05 2015 +0100)
 
-- Changes
+- The Hidden Peers bug has been fixed; it manifested in flapping peerings because
+  of dropped pings on the switch layer.
+- A bug in NodeStore_getPeers() has been fixed, which caused it to always return
+  the same peers.
+- `ETHInterface` can now bind to `all` network interfaces, and auto-peer on all
+  of them, being more resistant against interface going down or up during runtime.
+- `ETHInterface` now also brings the respective interfaces up when starting.
+- A crash related to the bit alignment of switch ping error responses has been fixed.
+- The ping and pingAll tools have been improved, pingAll now performs both
+  router and switch pings.
+- `InterfaceController` has been rewritten to allow for easier development of
+  custom interfaces.
+- Documentation for debugging using traffic analysis has been added.
 
 ## v13 -- January 2015
 
@@ -37,8 +49,6 @@ master since: 185fe28 - Nodes trying to ping themselves causing crashes (Fri Jan
 > Basically, the first bucket is likely to route through an "edge" node
 > In theory, it scales better if the network is large.
 
-- A bug in NodeStore_getPeers() has been fixed, which caused it to always return
-  the same peers.
 - The Admin API function `InterfaceController_peerStats()` now includes the peer's
   `protocolVersion`, and doesn't require authentication any longer.
 - `cjdroute --genconf` now has an `--eth` switch which enables the ETHInterface
