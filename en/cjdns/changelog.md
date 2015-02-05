@@ -9,6 +9,7 @@ Current state: 5fa245c - remove check code (Tue Feb 3 23:25:10 2015 +0100)
 ## v15 -- January 2015
 
 crashey since: 74e7b71 - Configurator should attempt a ping before beginning to setup the core (might fix startup errors for some people) (Fri Jan 23 23:45:04 2015 +0100)
+
 master since: 97161a5 - shitfuck missed a line (Thu Jan 29 19:25:39 2015 +0100)
 
 - The configurator now tries to ping the core process before starting to configure it.
@@ -31,6 +32,7 @@ master since: 97161a5 - shitfuck missed a line (Thu Jan 29 19:25:39 2015 +0100)
 ## v14 -- January 2015
 
 crashey since: 670b047 - Fixed bug in getPeers which caused it to return the same peers every time (Sun Jan 18 17:13:53 2015 +0100)
+
 master since: 601b6cd - Oops, lets bump the version while we're at it (Fri Jan 23 07:47:05 2015 +0100)
 
 - The Hidden Peers bug has been fixed; it manifested in flapping peerings because
@@ -50,6 +52,7 @@ master since: 601b6cd - Oops, lets bump the version while we're at it (Fri Jan 2
 ## v13 -- January 2015
 
 crashey since: bb06b63 - Added 2 new command line tools, traceroute and cjdnslog (Thu Jan 1 17:10:39 2015 +0100)
+
 master since: 185fe28 - Nodes trying to ping themselves causing crashes (Fri Jan 2 09:37:32 2015 +0100)
 
 - Nodes running v11 or below are not supported any longer. They can still
