@@ -23,7 +23,6 @@ master since: 601b6cd - Oops, lets bump the version while we're at it (Fri Jan 2
 crashey since: bb06b63 - Added 2 new command line tools, traceroute and cjdnslog (Thu Jan 1 17:10:39 2015 +0100)
 master since: 185fe28 - Nodes trying to ping themselves causing crashes (Fri Jan 2 09:37:32 2015 +0100)
 
-- Changes that haven't been documented yet
 - Nodes running v11 or below are not supported any longer. They can still
   establish peering to every other node (also v13), but from v13 on, their
   traffic won't be switched any longer. They also won't make it into v13 nodes'
@@ -38,5 +37,15 @@ master since: 185fe28 - Nodes trying to ping themselves causing crashes (Fri Jan
 > Basically, the first bucket is likely to route through an "edge" node
 > In theory, it scales better if the network is large.
 
-- The Admin API function `InterfaceController_peerStats()` doesn't require
-  authentication any longer.
+- A bug in NodeStore_getPeers() has been fixed, which caused it to always return
+  the same peers.
+- The Admin API function `InterfaceController_peerStats()` now includes the peer's
+  `protocolVersion`, and doesn't require authentication any longer.
+- `cjdroute --genconf` now has an `--eth` switch which enables the ETHInterface
+  and auto-peering.
+- There is now a script which adds peering passwords to both the config file and
+  the running process, avoiding the otherwise neccessary restart:
+  `contrib/bash/peers.sh user user@example.net <user's ipv6>`
+- Minor Fixes for Android
+- It's now possible to cross-compile for ARM, on an OSX host.
+- Documentation, and scripts in `contrib/` have been improved.
