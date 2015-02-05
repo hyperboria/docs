@@ -4,12 +4,29 @@ crashey is for development, master is rolling release
 
 A few words about Version.h
 
+Current state: 5fa245c - remove check code (Tue Feb 3 23:25:10 2015 +0100)
+
 ## v15 -- January 2015
 
 crashey since: 74e7b71 - Configurator should attempt a ping before beginning to setup the core (might fix startup errors for some people) (Fri Jan 23 23:45:04 2015 +0100)
 master since: 97161a5 - shitfuck missed a line (Thu Jan 29 19:25:39 2015 +0100)
 
-- Changes
+- The configurator now tries to ping the core process before starting to configure it.
+  This might fix a possible race condition during cjdroute startup.
+- A bug with ETHInterface auto-peering has been fixed.
+- A segfault in peerStats has been fixed.
+- The `-O` cflag for build-time optimization has been fixed. It can now be set as
+  `-O2` to optimize for performance, or `-Os` to optimize for disk space usage.
+- We now try to remember and use the last known route to a node.
+- Short-form IPv6 addresses are now supported.
+- The tools in `contrib/nodejs/tools/` have moved to `tools/`.
+- The sessionStats tool has been added; ping and traceroute tools can now resolve DNS domains.
+- The search tool has been added, and DHT searches are now available in the
+  Admin API as `SearchRunner_search()`.
+- The ping and search tools now allow a `-c` option for setting the number searches
+  or pings.
+- The Admin API functions `NodeStore_nodeForAddr()` and `NodeStore_getLink()` no
+  longer require authentication.
 
 ## v14 -- January 2015
 
@@ -42,7 +59,7 @@ master since: 185fe28 - Nodes trying to ping themselves causing crashes (Fri Jan
 - The ETHInterface wire protocol now includes the payload length. A few ethernet
   adapters don't strip the checksum which is appended to the packet by the
   sender, and thus confuse the decrypter.
-- NodeStore_getBest() no longer takes DHT k-buckets into accounts -- the
+- `NodeStore_getBest()` no longer takes DHT k-buckets into accounts -- the
   respective code has been commented out. From the code comments:
 
 > The network is small enough that a per-bucket lookup is inefficient
