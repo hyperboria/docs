@@ -25,6 +25,15 @@ Now might be a good time to actually figure out how we're going to move forward.
 (what do people think of pros/cons?)
 
 - ICANN (by the NSA) # The DNS you already use, provided by clearnet
+  - h.example.net for hyperboria, example.net for clearnet
+  - doesn't work well with CNAME records, since they get used for AAAA resolution too
+    - `pad.meshwith.me.  227  IN  CNAME  dax.meshwith.me.`
+    - `dax.meshwith.me.  227  IN  AAAA  fcc6:700e:1577:b2df:20cc:3ece:24ff:3fa7`
+    - `<larsg> should remove those CNAMES`
+    - `<larsg> they apparantly get used for AAAA lookups too`
+    - `<larsg> that's how pad. resolves to 3fa7`
+    - `<larsg> finn: i mean CNAME records for domains which also have a h. variant, in general`
+    - `<larsg> because due to the CNAME with an AAAA record on the other end, the clearnet variant is not clearnet anymore`
 - hypeDNS (formerly by Mikey, now by finn) # conventional dns, centralized, only on hype
 - paraDNS (by sdamashek/wolfmitchell) # central to the parabolic [sub]network, also conventional DNS, also only on hype
   - http://couch.syrinxist.org/dns
