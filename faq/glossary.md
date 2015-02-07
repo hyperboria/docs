@@ -13,6 +13,13 @@ This is an incomplete list of terms used in direct context of cjdns.
 
 ## List of Terms
 
+### Hidden Peers
+
+This was a peering bug which was fixed in cjdns v14. Please make sure none of
+your peers is affected, and if there is one, tell them to update.
+
+    tools/peerStats | sort
+
 ### NodeStore
 
 The internal name of cjdns' routing table.
