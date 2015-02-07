@@ -5,6 +5,7 @@ Here's some documentation we've been working on. Feel free to fork us and [add s
 * [Intro](intro.md)
  * [General FAQ](faq/general.md)
  * [Peering FAQ](faq/peering.md)
+ * [Glossay](faq/glossary.md)
  * [Changelog for cjdns](cjdns/changelog.md)
  * [Anatomy of a running cjdns](cjdns/anatomy.md)
  * [Node Operator Guidelines](cjdns/Operator_Guidelines.md)
