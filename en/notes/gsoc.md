@@ -15,4 +15,25 @@
 3. Structure! Hard deadlines get people moving. We'll get more done as a well-defined organization.
 4. A working product... an android app? Something to improve the core routing algorithm? Debugging/visualization/simulation tools? Userland config management?
 
+## Ideas
 
+### cjdns on the Freifunk backbone (BBB) and network (IC-VPN)
+
+The Berlin BackBone (BBB) is a network of dedicated wifi links between several sites at public buildings like churches or townhalls. It is the backbone of Freifunk Berlin's network, which other nodes in the neighbourhoods connect to. The InterCity VPN (IC-VPN) connects the Berlin network with the networks of other Freifunk communities, e.g. in Leipzig and Hamburg.
+
+The goal is to:
+
+- tunnel Internet traffic from the neighbourhood to the Freifunk <-> Internet exchanges
+- link cjdns islands in the community
+- automate the tunnel setup on leaf nodes
+
+TODO: need to think about how remote-friendly this idea is
+
+### Continuous simulations and benchmarks of cjdns
+
+- [HACKING.md#simulating](https://github.com/cjdelisle/cjdns/blob/master/HACKING.md#simulating)
+- [cjdns-testbed](https://github.com/lgierth/cjdns-testbed)
+
+### DNS
+
+See [DNS, with trust based on peering-like agreements](dns.html#dns-with-trust-based-on-peering-like-agreements)
