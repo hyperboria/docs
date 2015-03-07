@@ -11,3 +11,12 @@ The good citizens of Hyperboria decided to put together this collection of docum
 We want you to [get involved](http://roaming-initiative.com/blog/posts/wtfm)! Feel free to submit pull requests.
 
 See [index.md](index.md) for current progress. We'd love more languages!
+
+## The scope of this project
+
+We are interested in documenting a range of topics:
+
+1. cjdns internals: bugs and features
+2. operator culture and best practices
+3. meshlocal resources
+4. introductory literature
