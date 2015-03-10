@@ -1,6 +1,6 @@
 ## Policy
 
-cjd recently closed the issue tracker on his [cjdns repo](http://github.com/cjdelisle/cjdns) on the basis that encouraging people to submit errors, then wander off feeling like they had done their part in solving the problem (my words, not his (--ansuz)).
+cjd recently closed the issue tracker on his [cjdns repo](http://github.com/cjdelisle/cjdns) on the basis that it had the effect of encouraging people to submit errors, then wander off feeling like they had done their part in solving the problem (my words, not his (--ansuz)).
 
 Several of us from within the community encouraged him to do so, justifying the action by considering that it had not been maintained in some time, and without having someone assume responsibility for its maintenance there was little reason to keep it around.
 
