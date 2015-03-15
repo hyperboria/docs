@@ -40,3 +40,30 @@ Unless otherwise noted, the contained documents are licensed under a
 Creative Commons Attribution 4.0 Unported License.
 
 See [LICENSE.txt](LICENSE.txt), or <[creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)>
+
+
+## For committers
+
+Please remember that the canonical repo is at [gitboria.com/projectmeshnet/documentation](http://gitboria.com/projectmeshnet/documentation) in Hyperboria.
+Pull from there, and push there first.
+If the canonical repo and mirror at [github.com/hyperboria/docs](https://github.com/hyperboria/docs) diverge,
+the canonical repo's respective branch shall be force-pushed to the mirror.
+
+
+## Documentation in cjdns.git/doc
+
+This repository is semi-regularly merged into cjdns' `doc/` directory.
+It's useful to ship documentation with the code.
+We use the following commands.
+We squash all new commits since the last merge into one commit,
+and merge that commit into master.
+
+```sh
+cd cjdns/
+git checkout master
+git remote add hyperboria git@github.com:hyperboria/cjdns.git
+git remote add docs git@github.com:hyperboria/docs.git
+git pull hyperboria master
+git subtree pull --squash -P doc/ docs/master
+git push hyperboria master
+```
