@@ -2,15 +2,18 @@
 
 *Documenting things related to the meshnet*
 
-[cjdns](https://github.com/cjdelisle/cjdns) addresses a large number of complex issues in an elegant way. While efforts have been made to provide a default configuration that matches the greatest number of use cases, it is impractical to expect software to replace understanding.
+[cjdns](https://github.com/hyperboria/cjdns) addresses a large number of complex issues in an elegant way. While efforts have been made to provide a default configuration that matches the greatest number of use cases, it is impractical to expect software to replace understanding.
 
 > Enter the documentation project...
 
 The good citizens of Hyperboria decided to put together this collection of documentation to help make the inner workings of cjdns more transparent.
 
-We want you to [get involved](http://roaming-initiative.com/blog/posts/wtfm)! Feel free to submit pull requests.
+We want you to [get involved](http://www.roaming-initiative.com/blog/posts/wtfm)! Feel free to submit pull requests.
 
 See [index.md](index.md) for current progress. We'd love more languages!
+
+Also have a look at [Prose for Programmers](https://github.com/joshuacc/prose-for-programmers), a work-in-progress book aimed at helping software developers write better prose.
+
 
 ## The scope of this project
 
@@ -20,6 +23,7 @@ We are interested in documenting a range of topics:
 2. operator culture and best practices
 3. meshlocal resources
 4. introductory literature
+
 
 ## Reporting bugs
 
