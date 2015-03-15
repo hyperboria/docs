@@ -28,3 +28,11 @@ We are interested in documenting a range of topics:
 If you think you've found a bug, report it on [our fork's issue tracker](https://github.com/hyperboria/cjdns/issues). We'll try to gather up documentation related to the issue, to better understand where it might be coming from. Once we can narrow it down, and research some of the background details to that particular piece of functionality, we may be able to submit patches ourselves.
 
 Anything you can submit that gets us closer to understanding some bug or function within cjdns is welcome. By starting an inquiry, you make it just a little bit easier for someone else to continue it. Get involved!
+
+
+## License
+
+Unless otherwise noted, the contained documents are licensed under a
+Creative Commons Attribution 4.0 Unported License.
+
+See [LICENSE.txt](LICENSE.txt), or <[creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)>
