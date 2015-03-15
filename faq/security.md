@@ -13,6 +13,16 @@ Suppose you want to [pull a snowden](http://en.wikipedia.org/wiki/Global_surveil
 
 There are quite likely measures that you can take to encrypt your VPS's hard drive, and you should look into that, but suppose you haven't encrypted anything. In that case, yes, your VPS provider can probably just go and look at your private keys, and read your encrypted traffic.
 
+Even if you have encrypted your hard drive:
+
+> your provider can pause you for a moment and take a snapshot of your ram, then dump your keys
+
+> `--cjd`
+
+The implication of this is that any traffic originating with, or destined for your VPS, should not be treated as being absolutely secure.
+
+## The upside
+
 What you should understand is cjdns uses [end to end encryption](http://en.wikipedia.org/wiki/End-to-end_encryption). That means that having your own private key compromised only affects that particular node's security. A compromised node can continue to forward traffic, and because of the nature of public key cryptography, it will be unable to read the contents of the packets it relays.
 
 So, should you worry about hosting on a VPS? **Only if you intend to _send_ or _receive_ sensitive information on that particular node**.
