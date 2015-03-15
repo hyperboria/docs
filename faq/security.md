@@ -29,6 +29,14 @@ So, should you worry about hosting on a VPS? **Only if you intend to _send_ or _
 
 If you want to connect to Hyperboria, but are for whatever reason unable to do so from your main computer, using a VPS as a static link into the network is quite reasonable. As long as you take precautions to protect the private keys on any nodes which initiate connections, **your data will remain secure in transit**.
 
+## Perfect Forward Secrecy
+
+Temporary keys are used and destroyed when cryptAuth sessions time out. Timeouts are subject to environmental influence, but can be considered _random_ for most practical purposes. CryptAuth sessions are all killed when cjdroute is restarted.
+
+If your `cjdroute.conf` file is somehow compromised, it _does **not**_ mean that all prior sessions have also been compromised.
+
+A compromised private key means someone can impersonate you going forward, though, it is quite likely that any party motivated to compromise your node would not do so. It is far more likely that a skilled aggressor would simply use it to eavesdrop, and you would not realize that your node had been undermined.
+
 ## A few notes
 
 cjdns is experimental! It is possible that someone is using a zero-day exploit in the wild to compromise a node's security. 
@@ -38,3 +46,5 @@ If you're really worried, you can also use tools like PGP to further encrypt dat
 You could also use an [XMPP client](http://en.wikipedia.org/wiki/XMPP) that supports the [OTR](https://otr.cypherpunks.ca/) protocol, and use that to transfer PGP-encrypted data over cjdns.
 
 If you have good reason to protect your data (other than simply doing it on principal), then redundancy is your friend!
+
+If it's not completely clear from the information above, you should not store your PGP keys on your VPS either! Encrypt locally, protect your keys, and be mindful that others do not have physical access to the device which stores your private keys!
