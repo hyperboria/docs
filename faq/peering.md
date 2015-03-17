@@ -145,3 +145,14 @@ Make a file called `~/.cjdnsadmin`, containing valid JSON with the properties ab
 To find your peers, run `cjdns/contrib/nodejs/tools/peerStats.js`
 
 Alternatively, you can use [this tool which does a few other things as well](https://github.com/ehmry/cjdcmd-ng).
+
+## What are the EAGAIN errors about?
+
+This is a red herring. It simply means that UDPInterface received a packet, and that there's not immediately another packet received.
+
+Example:
+
+```
+recvmsg(13, {msg_name(16)={sa_family=AF_INET, sin_port=htons(25021), sin_addr=inet_addr("31.20.45.26")}, msg_iov(1)=[{"\0\0\0\1\1\312\250\207\206\6p\230\200\0k\333\305(\204\27`0\370\202\332B\341`89\376\210"..., 3496}], msg_controllen=0, msg_flags=0}, 0) = 160
+recvmsg(13, 0x7fff9490f030, 0)          = -1 EAGAIN (Resource temporarily unavailable)
+```
