@@ -31,7 +31,7 @@ We are interested in documenting a range of topics:
 
 If you think you've found a bug, report it on [our fork's issue tracker](https://github.com/hyperboria/cjdns/issues). We'll try to gather up documentation related to the issue, to better understand where it might be coming from. Once we can narrow it down, and research some of the background details to that particular piece of functionality, we may be able to submit patches ourselves.
 
-Anything you can submit that gets us closer to understanding some bug or function within cjdns is welcome. By starting an inquiry, you make it just a little bit easier for someone else to continue it. With that in mind, please read [this note on reporting bugs](bugs/reporting) and [our more general contribution policy](bugs/policy). Get involved!
+Anything you can submit that gets us closer to understanding some bug or function within cjdns is welcome. By starting an inquiry, you make it just a little bit easier for someone else to continue it. With that in mind, please read [this note on reporting bugs](bugs/reporting.md) and [our more general contribution policy](bugs/policy.md). Get involved!
 
 ## License
 
