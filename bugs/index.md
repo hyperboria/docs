@@ -1,6 +1,6 @@
-* [black-hole](black-hole)
-* [connectTo-overflow](connectTo-overflow)
-* ~~[hidden-peers](hidden-peers)~~ :: **fixed**
-* [policy](policy)
-* [reporting](reporting)
-* [santa](santa)
+* [black-hole](black-hole.md)
+* [connectTo-overflow](connectTo-overflow.md)
+* ~~[hidden-peers](hidden-peers.md)~~ :: **fixed**
+* [policy](policy.md)
+* [reporting](reporting.md)
+* [santa](santa.md)
