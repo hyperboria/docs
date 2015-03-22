@@ -9,5 +9,5 @@ If you are **not** running the latest _crashey_, then it is quite likely the bug
 1. On which device are you encountering the issue?
 2. When was that device last updated?
 3. Do you have any other applications running which might interfere with some behaviour? (firewalls are a common cause of issues)
-
+4. On which OS/distro did you encounter the issue?
 
