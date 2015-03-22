@@ -38,5 +38,5 @@
       - Go - help jph build zlarkd!
       - Windows/CrossPlatform devs - Help us make cjdns portable to *all* the devices!
   + Jargon file
-* Known bugs && their circumstances
+* [Known bugs && their circumstances](../bugs/index)
   + Failure to reestablish connection after disconnect/ipv4 change
