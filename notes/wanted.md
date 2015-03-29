@@ -50,3 +50,5 @@ If you see something listed here that has been taken care of, please knock it of
   + Jargon file
 * [Known bugs && their circumstances](../bugs/index.md)
   + Failure to reestablish connection after disconnect/ipv4 change
+  + OS/distro-specific quirks
+    - OSX doesn't autopeer
