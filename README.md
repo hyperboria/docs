@@ -54,15 +54,29 @@ the canonical repo's respective branch shall be force-pushed to the mirror.
 This repository is semi-regularly merged into cjdns' `doc/` directory.
 It's useful to ship documentation with the code.
 We use the following commands.
-We squash all new commits since the last merge into one commit,
+
+```sh
+$ cd cjdns/
+$ git remote add hyperboria git@github.com:hyperboria/cjdns.git
+$ git remote add docs git@gitboria.com:projectmeshnet/docs.git
+```
+
+To merge documentation changes into cjdns,
+we squash all new commits since the last merge into one commit,
 and merge that commit into master.
 
 ```sh
-cd cjdns/
-git checkout master
-git remote add hyperboria git@github.com:hyperboria/cjdns.git
-git remote add docs git@github.com:hyperboria/docs.git
-git pull hyperboria master
-git subtree pull --squash -P doc/ docs/master
-git push hyperboria master
+$ git checkout master
+$ git pull hyperboria master
+$ git subtree pull --squash -P doc/ docs/master
+$ git push hyperboria master
+```
+
+To merge documentation changes in cjdns back upstream into this repository,
+we create a merge commit, and push it.
+
+```
+$ git subtree split -P doc/
+38e3bc6f899de49213aed754c74046b9ae4a85d2
+$ git push docs 38e3bc6f:master
 ```
