@@ -77,6 +77,7 @@ You can contribute to its documentaion: https://github.com/hyperboria/docs
       - [Firewall on localhost](bugs/configurator-timeout.md)
       - [UDP overflow](bugs/connectTo-overflow.md)
     - ~~[Hidden Peers](bugs/hidden-peers.md)~~
+    - [OS/distro-specific quirks](bugs/distro-quirks.md)
   - [Reporting bugs](bugs/reporting.md)
 
 
