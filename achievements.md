@@ -53,6 +53,7 @@ Achievements expire, so if at any given time you don't qualify, you lose those p
 41. Configure an authorizedPassword without restarting cjdns.
 42. Find out whether your home router can run cjdns: [OpenWrt table of hardware](http://wiki.openwrt.org/toh/start)
 43. Try out the [Meshbox firmware](https://github.com/seattlemeshnet/meshbox) on your home router.
+44. Harden your cjdns OpenWrt router by building OpenWrt with cjdns from source and make sure [seccomp](http://lwn.net/Articles/475043/), [SSP](http://lwn.net/Articles/584225/) and [RELRO](http://tk-blog.blogspot.de/2009/02/relro-not-so-well-known-memory.html) are enabled. Using [musl](http://www.musl-libc.org/) instead of [uClibc](http://www.uclibc.org/) may make you sleep even better. See [buildsdk.sh](https://github.com/SeattleMeshnet/meshbox/blob/master/buildsdk.sh) to see how this can work.
 
 ## Penalties
 
@@ -71,5 +72,3 @@ Avoid qualifying for these _achievements_, as they count against your score.
 * **Newest is best**. Every now and then there are intentionally breaking changes. This happens when the network is suffering because of old nodes. In such cases, modifications are made which cause up to date nodes to drop old nodes' traffic. If you don't update, you might fall off the map. If you are running a protocol in between the cutoff point and the bleeding edge, you may be the link which allows older nodes to continue participating in the network. Please update so we can all use the latest features to better diagnose bugs.
 * **There is no substitute for understanding**. People build tools that streamline difficult processes, but ultimately you cannot rely on software to fix all of your problems. At some point, bad behaviour has to change, and that means understanding the principles behind security, exercising discipline, and informing those around you when they are putting themselves (and possibly others) at risk.
 * **We cannot rely entirely on the experts**. This is closely related to [Brooks' Law](http://en.wikipedia.org/wiki/Brooks%27s_law). An expert in a subject is in an excellent position to push further, and learn those things which are out of reach of those with less experience in the subject. Unfortunately, this often means they are in the position of having to choose between learning more about the subject in question, and spending their time sharing disseminating their knowledge. It is very important to understand that when people take the time to help you understand a difficult subject, they need you to help share that information with those who know are less experienced than you. In the Hypeborian community, we've taken to referring to this method as [WTFM](http://www.roaming-initiative.com/blog/posts/wtfm).
-
-
