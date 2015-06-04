@@ -16,3 +16,5 @@
 ```
 
 There you have it, Macs don't autopeer via ethernet frames.
+
+It's also broken on windows, probably for the same reason.
