@@ -30,8 +30,12 @@ CRITICAL Configurator.c:107 Got error [UDPAddrIface.c:273 call to uv_udp_bind() 
 
 Enable IPv6 with
 
-```
+```bash
 $ sudo modprobe ipv6
 ```
 
-and Cjdns should start correctly.
+and Cjdns should start correctly. To keep IPv6 on after reboot add `ipv6` to the end of the file `/etc/modules`
+
+```bash
+$ sudo sh -c 'echo ipv6 >> /etc/modules'
+```
