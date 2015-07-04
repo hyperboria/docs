@@ -1,6 +1,6 @@
 Installing CJDNS on Fedora
 ==========================
-(last tested on Fedora 22, those with fedora versions older than 22 should substitue yum for dnf.)
+(last tested on Fedora 22, those with fedora versions older than 22 should substitute yum for dnf.)
 
 #Prerequisites
 ```bash
