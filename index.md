@@ -38,6 +38,7 @@ You can contribute to its documentaion: https://github.com/hyperboria/docs
 - Installation
   - [Most Linuxes](install/linux.md) *TODO*
   - [OpenWrt](install/openwrt.md)
+  - [Docker](install/docker.md)
   - [Android](install/android.md) *TODO*
   - [Firefox OS](install/firefoxos.md) *TODO*
   - [OS X](install/osx.md)
