@@ -9,7 +9,7 @@ This readme may drift from the readme associated with the repository used in thi
 ## Installation and Operation
 Generate yourself some configs
 
-    docker run -ti --volume --name debian-cjdns $(pwd)/cjdns:/etc/cjdns chamunks/debian-cjdns
+    docker run -ti --volume $(pwd)/cjdns:/etc/cjdns --name debian-cjdns chamunks/debian-cjdns
 This will create cjdns config files in a directory named cjdns nested inside of your current working directory.
 
 You can then modify these config files to your liking. This includes modifying the port you wish to bind cjdns to inside of your container.
