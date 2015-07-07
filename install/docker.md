@@ -1,8 +1,11 @@
 # Cjdns docker container with Debian base.
-`Complexity is the enemy of security.`  This containers aim will be to attempt to reduce any impact that this appliance will have on its host.  It will also aim to be capable of being run in container services such as Amazon's EC2 Container service.  Its not intended necessarily to be run at home but to actually be run as a point of presence in a public datacenter which can give you a dedicated external access point to Hyperboria or any other meshnets.
+`Complexity is the enemy of security.`  This containers aim will be to attempt to reduce/eliminate any impact that this appliance will have on its host, while also reducing the initial learning curve required to get started.  You also have the added benefit of having `a no cost learning experience` meaning this will not break your host machine in the process of you learning how to use it.
+
+This container will also not only help you learn how to get going, it will also aim to be capable of being run in container services such as Amazon's EC2 Container service.  Its not intended necessarily to be run at home but to actually be run as a point of presence in a public datacenter which can give you a dedicated external access point to Hyperboria or any other meshnets.
 
 ## Disclaimer
 This readme may drift from the readme associated with the repository used in this installation so if it seems to be broken at all.  Please feel free to try checking out the [main repository](https://registry.hub.docker.com/u/chamunks/debian-cjdns/) for the latest documentation.  I also encourage [bug reports and feature requests](https://github.com/chamunks/debian-cjdns/issues) they help improve the quality of open source projects like these.
+
 ## Installation and Operation
 Generate yourself some configs
 
