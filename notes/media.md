@@ -2,6 +2,8 @@
 
 ## English
 
+http://www.wired.com/2013/10/thompson/
+
 http://marsocial.com/2015/07/the-declaration-of-internet-independence/
 
 http://curiousmatic.com/meet-the-young-techies-who-want-to-change-the-way-nyc-connects-to-the-internet/
@@ -41,6 +43,8 @@ http://www.zive.cz/clanky/sest-alternativnich-a-zapomenutych-internetu/sc-3-a-16
 ## German???
 
 http://scratchbook.ch/2013/06/24/cjdns/
+
+http://www.nzz.ch/digital/neustart-1.18140845
 
 ## In Russian
 
