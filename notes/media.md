@@ -36,6 +36,8 @@ http://sett.com/alansjourney/52637
 
 [Does the hacker news count as media?](https://news.ycombinator.com/item?id=9843373)
 
+http://www.fastcompany.com/3044686/mesh-networks-and-the-local-internet-movement
+
 ## ???
 
 http://www.zive.cz/clanky/sest-alternativnich-a-zapomenutych-internetu/sc-3-a-169392/default.aspx
