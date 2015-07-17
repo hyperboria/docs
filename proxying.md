@@ -1,17 +1,19 @@
 Proxying
 ===========================
 
-Sometimes you just can't set-up cjdns on your machine.
-It might be because it is not yours machine or it is Windows (it is possible but who wants to mess with that).
+#Keep in mind that we'd rather you put cjdns on all your machines!
 
-The easiest way to browse Hyperboria's services then is to set-up a proxy.
+Sometimes it's just not possible to get cjdns working on a machine.
+
+The easiest way to access Hyperboria if you can't get access on your machine is through a box that already has access.
 This can be simply done using a SSH connection.
 
 Creating SOCKSv5 connection
 ----------------------------
 
 To create SOCKS SSH connection in Linux/OSX:
-```
+
+```bash
 ssh -f -N -D 8080 [your_cjdns_capable_host]
 ```
 This will connect to host under `[your_cjdns_capable_host]`.
@@ -23,16 +25,14 @@ This can be also achieved in PuTTY by creating a dynamic tunnel on port `8080`.
 Configuring your Web Browser
 ----------------------------
 
-If you are on with porxying all of your traffic through the server then just select SOCKS5 proxy
+If proxying all of your traffic through the server is acceptable to you, then just select SOCKS5 proxy
 and put `localhost` as hostname and `8080` as port.
 
-If you want your normal traffic to travel directly and only cjdns host to connect though the proxy,
+If you want your normal traffic to travel directly and only cjdns traffic to connect though the proxy,
 you have to use Proxy auto-config (PAC).
 
-Following PAC file checks if host is given as IPv6 in cjdns space, if not trys to resolve it (if that fails
-it usually means current DNS server is not IPv6 capable or domain is registered only in cjdns so
-it redirects it into the cjdns) and last if resolve is successful (current host is IPv6 capable)
-it checks whether the address is in cjdns space.
+The following PAC file checks if the host you are connecting to is a cjdns IPV6 address, if not tries to resolve it. (If that fails, it usually means current DNS server is not IPv6 capable, so it redirects the traffic through the proxy)Finally, if resolving via DNS is successful (and the current host is IPv6 capable) it checks whether the address is in cjdns space.
+
 ```js
 function FindProxyForURL(url, host) {
     // If we can't resolve this means that this host is IPv4 only. Trying cjdns won't hurt.
@@ -44,9 +44,9 @@ function FindProxyForURL(url, host) {
     return "DIRECT";
 }
 ```
-Also available as direct link: [cjdns.pac](https://gist.githubusercontent.com/Kubuxu/768735a1c39ce0f5ec03/raw/a8cf4baac722a45f9663a163492af6782884a155/cjsnds.pac)
+Also available as a file in this repo: [cjdns.pac](/cjdns.pac)
 
 This PAC file uses SOCKS5 connection with proxy server on `localhost` at port `8080`.
-If you are using different port, you have to change it accordingly.
+If you'd like to use a different port, you have to change it accordingly.
 
-Use this PAC file for `Automatic proxy configuration` option which is available in most browsers.
+Use this PAC file for `Automatic Proxy Configuration` option which is available in most browsers and other proxy management solutions.
