@@ -38,4 +38,6 @@ If you are able to connect at all over cjdns, then you can be quite sure that th
 
 ## How can I get involved?
 
-See our [contributing](contributing.md) document.
+If you are totally new to cjdns, you'll want to start by installing it somewhere and familiarizing yourself with how it works. Take notes of anything that you find difficult, unintuitive, or poorly documented, and share your knowledge so the next person who installs cjdns after reading the documentation has an easier time.
+
+Also, read our [contributing](contributing.md) document for notes on our policies for accepting contributions.
