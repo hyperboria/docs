@@ -4,7 +4,7 @@ To make your own benchmark:
 cat /proc/cpuinfo
 git log | head -n 1
 
-Paste results to https://ezcrypt.it/ and tell us about it in the IRC channel!
+Paste results to https://ncry.pt/ and tell us about it in the IRC channel!
 Weird processors wanted :D
 
 

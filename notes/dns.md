@@ -41,8 +41,8 @@ Now might be a good time to actually figure out how we're going to move forward.
   - https://pad.meshwith.me/p/rainflydns #thx
   - http://gitboria.com/cjd/rainflydns/
   - http://rfdns.cjdns.ca/
-  - https://ezcrypt.it/ck5n#gYdfOeREHwzD92H0WDry4Z5e
-  - https://ezcrypt.it/9Q6n#ejSF9d762REt7hmJ8pl46yp7
+  - https://ncry.pt/ck5n#gYdfOeREHwzD92H0WDry4Z5e
+  - https://ncry.pt/9Q6n#ejSF9d762REt7hmJ8pl46yp7
 - EmerCoin DNS (by emercoin.com) # similar to namecoin with notable differences
     - Longer names allowed than namecoin (512 instead of 255 bytes)
     - Longer values allowed than namecoin (20*1024 instead of 1023 bytes)
