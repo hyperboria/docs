@@ -37,7 +37,7 @@ $ cat /dev/urandom | strings | head -n 20 | tr -d '\n"`\ \t{}' | head -c 40 && e
 
 ```
 
-DO NOT transfer peering credentials over any sort of plaintext medium, such as IRC or unencrypted email. It's probably also a good idea to use a service like [NCrypt](https://ncry.pt) (also available [on Hyperboria](http://cjdns.ncryp.pt)) or send your peering details via encrypted email with PGP.
+DO NOT transfer peering credentials over any sort of plaintext medium, such as IRC or unencrypted email. It's probably also a good idea to use a service like [NCrypt](https://ncry.pt) (also available [on Hyperboria](http://cjdns.ncry.pt)) or send your peering details via encrypted email with PGP.
 
 ---
 
