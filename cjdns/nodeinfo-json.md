@@ -55,7 +55,7 @@ Sample Files:
     "country":"Genovia",
     "region":"Corsica",
     "municipality":"Bastia",
-    "url":"http://genovia.mesh.local.gen"
+    "uri":"http://genovia.mesh.local.gen"
   }
 }
 ```
