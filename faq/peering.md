@@ -10,9 +10,7 @@ You are encouraged to set up your own means of communication that does not rely 
 
 In order for this to be plausible, we require a sufficiently dense number of nodes. Neighbouring nodes need to be able to communicate with each other somehow.
 
-Chains of nodes are vulnerable to being shut off if even one link is taken offline, so we aim for clusters of interconnected nodes.
-
-This is called a [Meshlocal](/locals). I am trying to start a [Toronto-based MeshLocal](/toronto).
+Chains of nodes are vulnerable to being shut off if even one link is taken offline, so we aim for clusters of nodes which are connected via community owned infrastructure. In this documentation, such clusters are referred to as [Meshlocals](../meshlocals/existing/).
 
 To join the network, you need a password and a public key from someone who is already on the network. If you're in Toronto or the surrounding area, and are interested, <a href="/contact">contact</a> me.
 
