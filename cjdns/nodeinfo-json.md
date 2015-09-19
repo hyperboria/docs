@@ -47,6 +47,15 @@ Sample Files:
       "name": "MutliURI service",
       "description": "Some service with multiple URIs"
     }
-  ]
+  ],
+  "location":{
+    "longitude":0,
+    "latitude":0,
+    "altitude":0,
+    "country":"Genovia",
+    "region":"Corsica",
+    "municipality":"Bastia",
+    "url":"http://genovia.mesh.local.gen"
+  }
 }
 ```
