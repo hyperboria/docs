@@ -15,6 +15,5 @@ This is a short guide how to setup a debian jessie cjdns box.
 	ln -s /opt/cjdns/cjdroute /usr/bin
 	(umask 077 && ./cjdroute --genconf > /etc/cjdroute.conf)
 	cp contrib/systemd/cjdns.service /etc/systemd/system/
-	systemctl enable cjdns
-	systemctl start cjdns
+	systemctl enable cjdns --now
 
