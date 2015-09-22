@@ -31,7 +31,7 @@ windows-default-manifest
 make
 ```
 
-[Install node.js](http://nodejs.org/download/)
+[Install node.js](https://nodejs.org/download/)
 
 
 Get the [cjdns source](https://github.com/cjdelisle/cjdns)

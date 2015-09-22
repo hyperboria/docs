@@ -1,7 +1,7 @@
 # What the fc00::/8
 ## a brief introduction to cjdns
 
-author: [kpcyrd](http://github.com/kpcyrd)
+author: [kpcyrd](https://github.com/kpcyrd)
 
 original location: https://github/ansuz/cjdns-pr
 

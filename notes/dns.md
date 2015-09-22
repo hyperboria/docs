@@ -9,7 +9,7 @@ PS: IF YOU WANT TO GET CREDIT FOR ANY INFO YOU ADD, PUT YOUR NAME BESIDE IT. EVE
 IMHO hype is in need of 3 things
 
 - Docs  http://couch.syrinxist.org:9001/p/docs && http://couch.syrinxist.org:9001/p/howCjdnsWorks && http://couch.syrinxist.org/faq
-- easily deployable email, since there are obvious problems with having it centralized, it needs to be easier for the user to host (specifically on hyperboria) I am hopeful about http://haraka.github.io/ and https://github.com/andris9/simplesmtp .. though again, a clear guide to setting up dovecot/postfix/whatever on hype would also be satisfactory. Eventually I plan to make something out of simplesmtp for myself (probably over the summer), and I'll be releasing it. Unless someone else does it first... HINT. oh and by easy I mean like run a script and log in. srsly.
+- easily deployable email, since there are obvious problems with having it centralized, it needs to be easier for the user to host (specifically on hyperboria) I am hopeful about https://haraka.github.io/ and https://github.com/andris9/simplesmtp .. though again, a clear guide to setting up dovecot/postfix/whatever on hype would also be satisfactory. Eventually I plan to make something out of simplesmtp for myself (probably over the summer), and I'll be releasing it. Unless someone else does it first... HINT. oh and by easy I mean like run a script and log in. srsly.
 - DNS.. see below
 
 ## DNS on hyperboria/parabolic/any cjdns network

@@ -36,7 +36,7 @@ At first I commented out the `"ipv6"` line, and suddenly my node was able to lau
 
 At this point, I just commented out the ipv6 field, and relaunched the node. It worked, and for a while I was happy enough with that solution, but I wanted to understand what was happening.
 
-I asked [cjd](http://github.com/cjdelisle/) and he suggested commenting out a different field instead. Surely enough, commenting out any member of the data structure (other than those that are required by the cjdns angel) was enough to make the configuration file valid.
+I asked [cjd](https://github.com/cjdelisle/) and he suggested commenting out a different field instead. Surely enough, commenting out any member of the data structure (other than those that are required by the cjdns angel) was enough to make the configuration file valid.
 
 So as it turns out, the error occurred as a result of the length of the bencoded packet being sent to the angel exceeding the hard limit of the length of a UDP packet. Again, at **cjd**'s suggestion, I used a commonly available tool to diagnose the issue:
 
@@ -62,7 +62,7 @@ E..8..@.@...........+....$.7d5:error16:Request too big.e
 
 ## A successful conf
 
-I shortened this `connectTo` block one character at a time until `cjdroute` launched successfully. This block is the maximum length that passes. 
+I shortened this `connectTo` block one character at a time until `cjdroute` launched successfully. This block is the maximum length that passes.
 
 ```
 "192.168.10.102:6447":

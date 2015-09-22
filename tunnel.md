@@ -166,10 +166,10 @@ request for 'neighbours' is made, and traffic isn't allowed to be sent back unle
 Thankfully, there is a workaround available that involves running a daemon called `npd6`, which provides a
 response that satisfies NDP. Install npd6 through your distro's package management system if it's available,
 (recent debian based distrobutions may be able to install the package located here:
-http://code.google.com/p/npd6/downloads/list) otherwise you'll have to download and build it yourself by doing
+https://code.google.com/p/npd6/downloads/list) otherwise you'll have to download and build it yourself by doing
 the following:
 
-    wget http://npd6.googlecode.com/files/npd6-1.0.0.tar.gz
+    wget https://npd6.googlecode.com/files/npd6-1.0.0.tar.gz
     tar -xf ./npd-1.0.0.tar.gz
     cd npd6-1.0.0/
     make && sudo make install

@@ -1,6 +1,6 @@
 ## cjdns google summer of code
 
-[Google Summer of Code](http://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2015/help_page) has several goals:
+[Google Summer of Code](https://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2015/help_page) has several goals:
 
 1. Create and release open source code for the benefit of all
 2. Inspire young developers to begin participating in open source development

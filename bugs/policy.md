@@ -1,10 +1,10 @@
 ## Policy
 
-cjd recently closed the issue tracker on his [cjdns repo](http://github.com/cjdelisle/cjdns) on the basis that it had the effect of encouraging people to submit errors, then wander off feeling like they had done their part in solving the problem (my words, not his (--ansuz)).
+cjd recently closed the issue tracker on his [cjdns repo](https://github.com/cjdelisle/cjdns) on the basis that it had the effect of encouraging people to submit errors, then wander off feeling like they had done their part in solving the problem (my words, not his (--ansuz)).
 
 Several of us from within the community encouraged him to do so, justifying the action by considering that it had not been maintained in some time, and without having someone assume responsibility for its maintenance there was little reason to keep it around.
 
-To make up for its absence, however, we decided to provide [a fork of cjdns](http://github.com/hyperboria/cjdns), with [its own issue tracker](https://github.com/hyperboria/cjdns/issues) which would be maintained by the community. There are quite a few of us who care enough about this project to invest our time in improving things, however, it should be understood that:
+To make up for its absence, however, we decided to provide [a fork of cjdns](https://github.com/hyperboria/cjdns), with [its own issue tracker](https://github.com/hyperboria/cjdns/issues) which would be maintained by the community. There are quite a few of us who care enough about this project to invest our time in improving things, however, it should be understood that:
 
 1. like cjd, we are contributing our own personal time to do so
 2. many of us balance these volunteer commitments against full time jobs

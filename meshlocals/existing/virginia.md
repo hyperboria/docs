@@ -20,4 +20,4 @@ VirginiaMesh
 
 **IRC Channel:** [#VirginiaMesh on EFNet](irc://irc.choopa.net/virginiamesh)
 
-**Mailing List:** http://lists.projectmesh.net/virginia
+**Mailing List:** https://lists.projectmesh.net/virginia

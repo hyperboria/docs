@@ -70,17 +70,17 @@ Ansuz: I was going to say we could make a script based off of:
 
 ~~http://ansuz.syrinxist.org/share/ArceliarAMA/vanitygen.sh.txt~~
 
-https://wiki.projectmeshnet.org/Tips_and_Tricks#Picking_a_memorable_IPv6_address 
+https://wiki.projectmeshnet.org/Tips_and_Tricks#Picking_a_memorable_IPv6_address
 
 but if it's gonna mask bugs I won't bother
 
 ## Best number of peers to have?
 
-So far I wrote this: 
+So far I wrote this:
 
 ~~http://ansuz.syrinxist.org/faq#architecture~~
 
-http://ansuz.transitiontech.ca/faq#how-many-peers-should-i-have- 
+http://ansuz.transitiontech.ca/faq#how-many-peers-should-i-have-
 
 but I'd love to have some facts to back it up
 
@@ -95,7 +95,7 @@ The rest of the peering advice looks in general good. My only real comment is th
 ## Also:
 
 Randati: I want to start doing analytics on the network based on
-### what is the optimal ratio of nearby nodes to far off nodes? http://en.wikipedia.org/wiki/Small-world_network
+### what is the optimal ratio of nearby nodes to far off nodes? https://en.wikipedia.org/wiki/Small-world_network
 depending on what type of node you have (mobile/home/VPS)
 Having some kind of API to pull information of the network might be useful.
 

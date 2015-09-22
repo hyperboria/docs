@@ -15,7 +15,7 @@ This is an incomplete list of terms used in direct context of cjdns.
 
 ### Blag
 
-The [correct pronunciation](http://xkcd.com/148/) of 'blog'.
+The [correct pronunciation](https://xkcd.com/148/) of 'blog'.
 
 ### Hidden Peers
 
