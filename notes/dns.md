@@ -1,17 +1,5 @@
 # Random notes about cjdns and DNS
 
-by the incredible ansuz
-
-THIS IS AN ETHERPAD Meaning you can just write stuff in if you want. Try not to delete stuff, feel free to add try to respect the overall structure, but it's backed up anyway if you go ruining shit, you aren't really doing any damage, just being immature. KTHXBAI
-
-PS: IF YOU WANT TO GET CREDIT FOR ANY INFO YOU ADD, PUT YOUR NAME BESIDE IT. EVENTUALLY I WILL CLEAR AUTHORSHIP COLOURS FROM THIS DOC, AND ATTRIBUTION WILL BE IMPOSSIBRU
-
-IMHO hype is in need of 3 things
-
-- Docs  http://couch.syrinxist.org:9001/p/docs && http://couch.syrinxist.org:9001/p/howCjdnsWorks && http://couch.syrinxist.org/faq
-- easily deployable email, since there are obvious problems with having it centralized, it needs to be easier for the user to host (specifically on hyperboria) I am hopeful about https://haraka.github.io/ and https://github.com/andris9/simplesmtp .. though again, a clear guide to setting up dovecot/postfix/whatever on hype would also be satisfactory. Eventually I plan to make something out of simplesmtp for myself (probably over the summer), and I'll be releasing it. Unless someone else does it first... HINT. oh and by easy I mean like run a script and log in. srsly.
-- DNS.. see below
-
 ## DNS on hyperboria/parabolic/any cjdns network
 
 ### What is this about??
@@ -36,7 +24,6 @@ Now might be a good time to actually figure out how we're going to move forward.
     - `<larsg> because due to the CNAME with an AAAA record on the other end, the clearnet variant is not clearnet anymore`
 - hypeDNS (formerly by Mikey, now by finn) # conventional dns, centralized, only on hype
 - paraDNS (by sdamashek/wolfmitchell) # central to the parabolic [sub]network, also conventional DNS, also only on hype
-  - http://couch.syrinxist.org/dns
 - rainflyDNS (ironically, by cjd) # built off of namecoin? integrated into cjdns. development (seemingly) halted # correct me if I'm wrong.
   - https://pad.meshwith.me/p/rainflydns #thx
   - http://gitboria.com/cjd/rainflydns/
@@ -62,7 +49,6 @@ Now might be a good time to actually figure out how we're going to move forward.
   - https://gnunet.org/sites/default/files/schanzen2012msc.pdf (masters thesis proposing GADS) (read this if you need to kill an afternoon)
 - .p2p (from TPB people) - http://p2pfoundation.net/Dot-P2P http://dot-p2p.org
 - https://github.com/mwarning/KadNode - P2P DNS and more, written in C, based on the Kad DHT with optional support for signed records using libsodium
-- http://couch.syrinxist.org/share/dns-idea.txt #ircerr's idea
 
 ### proposed/extant TLDs...
 
@@ -113,12 +99,6 @@ I'd like to see a proposed flow of how the user would...
 - sign up for/generate domains ( if signups are required, we should have a simple API or web interface ( hopefully in a language we all agree on (OR Language agnostic)))
 
 Would it be possible to have it be a part of cjdns? eg one less step to use? // it kind of is, RAINFLYDNS, but the servers aren't running yet. We have 4 people running them, the system requires the cooperation of 13. If 8 others want to volunteer, I am willing to be the fifth. cjd gave his 'seal of approval'.
-
-- That being said, conventional DNS (A LA hypeDNS and paraDNS) is not difficult to set up. I've detailed the way to do it http://couch.syrinxist.org/dns <- here for paraDNS
-- When HypeDNS comes back online (supposedly on the weekend when finn isn't in school), I will add instructions for that.
-- It's literally 3 commands (at least on Debian/ubuntu/mint/arch).
-- I am willing to list instructions for OSX or other linux distros, but I am only able to test instructions on distros I run.
-- If you figure out how to do it on anything else, let me know and I'll list it.
 
 it was proposed (by prurigro) that an address be somehow based upon the owner's cjdns IPV6
 
