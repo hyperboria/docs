@@ -66,19 +66,9 @@ Ansuz: lol, oh so every address would end in cf? or that's a hash.. so maybe not
 
 Arceliar: Addresses would still start with fc. right now, before we xor, we basically swap positions of the first and second half of the address, to keep the fc away from the first few bits because the DHT would hate that. My point is, if that's what we're worried about, we could keep the same addresses but flip them (so it would look like it ends in... not cf but whatever the bitwise reverse of fc is) (its.. 03) right before we xor. Nobody outside the cjdns code base would have any idea that this happens. It would just be slightly less confusing to work around than a 64 bit rotation... that or we chop the leading fc off of things before calculating anything. Implementation details, don't worry about it.
 
-Ansuz: I was going to say we could make a script based off of:
-
-~~http://ansuz.syrinxist.org/share/ArceliarAMA/vanitygen.sh.txt~~
-
-https://wiki.projectmeshnet.org/Tips_and_Tricks#Picking_a_memorable_IPv6_address
-
-but if it's gonna mask bugs I won't bother
-
 ## Best number of peers to have?
 
 So far I wrote this:
-
-~~http://ansuz.syrinxist.org/faq#architecture~~
 
 http://ansuz.transitiontech.ca/faq#how-many-peers-should-i-have-
 
@@ -119,7 +109,6 @@ I'm reading through the whitepaper now,
 <ansuz> as in, generic network traffic to encourage peer discovery
 <Arceliar> yeah. when alice receives a ping, she sees it's to a node that she doesn't have on her routing table yet. so she adds that node and the return route for the packet to the routing table.
 <Arceliar> i think something approximating that happens. may have changed during crashey.
-<ansuz> http://couch.syrinxist.org/share/fuck-yeah-l.png
 <Arceliar> right now the network depends a lot on forwarding. if neither alice nor bob have the other on their routing tables, then never find eachother (unless it's by accident) and just depend on the DHT to handle routing
 <Arceliar> if the DHT has problems (e.g. all the old nodes that haven't updated yet) then forwarded packets may vanish into a routing blackhole
 <frozen> ansuz: that image is as large as it is to troll, isn't it.
