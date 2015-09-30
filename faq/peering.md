@@ -1,18 +1,14 @@
 ## What is Hyperboria?
 
-[Hyperboria](https://hyperboria.net) is an encrypted [Mesh Network](https://en.wikipedia.org/wiki/Mesh_networking) designed for privacy and resiliency to censorship.
+[Hyperboria](https://hyperboria.net) is an encrypted [Mesh Network](https://en.wikipedia.org/wiki/Mesh_networking) that utilizes [cjdns](https://en.wikipedia.org/wiki/Cjdns), a [layer 3](https://en.wikipedia.org/wiki/Network_layer) routing protocol which implements [end to end encryption](https://en.wikipedia.org/wiki/End-to-end_encryption).
 
-It currently exists as an [Overlay](https://en.wikipedia.org/wiki/Overlay_network) test network for [Project Meshnet](https://projectmeshnet.org/), and is only accessible to those who install [cjdns](https://en.wikipedia.org/wiki/Cjdns).
+Many of the Hyperboria's nodes are connected over the internet, making it at least partially an [Overlay network](https://en.wikipedia.org/wiki/Overlay_network), however, cjdns works quite well running over its own infrastructure. If you can establish point to point connections with people in your neighbourhood, you can establish what we call a [Meshlocal](../meshlocals/existing/), a community operated networking initiative.
 
-Ultimately, we hope to build a viable alternative to the regular internet, which we call [clearnet](https://www.urbandictionary.com/define.php?term=clearnet). Our ultimate goal is to replace the existing hierarchical internet with a non-hierarchical model.
+Ultimately, we hope to build a viable alternative to the regular internet, which we call [clearnet](https://www.urbandictionary.com/define.php?term=clearnet). Wherever we see hierarchical network structures, we attempt to replace them with [decentralized structures](http://redecentralize.org/).
 
-You are encouraged to set up your own means of communication that does not rely on the internet, maybe using something like [this woktenna](http://geobray.com/2010/02/07/woktenna-for-3g/)?
+Our community mirrors the technology that we are building. Development is distributed across many communities around the world, and we stitch together smaller networks with UDP links over the internet, and communicate largely over HypeIRC, available at irc://irc.hypeirc.net.
 
-In order for this to be plausible, we require a sufficiently dense number of nodes. Neighbouring nodes need to be able to communicate with each other somehow.
-
-Chains of nodes are vulnerable to being shut off if even one link is taken offline, so we aim for clusters of nodes which are connected via community owned infrastructure. In this documentation, such clusters are referred to as [Meshlocals](../meshlocals/existing/).
-
-To join the network, you need a password and a public key from someone who is already on the network. If you're in Toronto or the surrounding area, and are interested, <a href="/contact">contact</a> me.
+To find peers, `/join #peering`. To Help with development, `/join #cjdns`. To assist us in documenting cjdns and Hyperboria, `/join #documentation`.
 
 ## Can I run Cjdns in a virtual machine?
 
