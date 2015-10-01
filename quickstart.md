@@ -2,7 +2,7 @@
 
 ### Introduction
 
-cjdns is the name of both the daemon and the network protocol that implements a secure, scalable and fast network with minimal configuration.
+cjdns is the name of a new network protocol that implements a secure, scalable and fast network with minimal configuration.
 
 cjdns was born out of a need to solve inherent problems in the standard TCP/IP stack, like running out of addressable space and vulnerability to DDoS attacks.
 It also implements end-to-end encryption out of the box, so any communication in a cjdns network is meddle-proof.
