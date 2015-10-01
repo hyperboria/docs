@@ -59,13 +59,22 @@ Follow any link and get to the peer info or "creds", which look something like t
     }
 
 Copy this info and paste it into the `cjdroute.conf` you generated. The peer info
-goes into the "connectTo" section under the "UDPInterface" section.
+goes into the "connectTo" section under the "UDPInterface" section. 
+
+**Note:** Under UDPInterface there are separate sections for IPv4 and IPv6 based peers,
+make sure you don't mix them up.
 
 Thats it, you're done! Fire up cjdns with
 
-   sudo ./cjdroute < cjdroute.conf  
+    sudo ./cjdroute < cjdroute.conf  
 
-and its time to start testing things and getting involved
+If all goes well, cjdroute starts up a daemon in the background, and lets you know. You should see
+
+    1443702359 DEBUG Configurator.c:635 Cjdns started in the background
+
+If not, you probably have something wrong with the configuration file.
+
+Once cjdns starts up correctly, you're ready to start diving in.
 
 ### Step 4: Testing the network
 
