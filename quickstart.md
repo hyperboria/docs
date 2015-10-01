@@ -1,6 +1,6 @@
 ## Getting going with cjdns
 
-1. what is it?
+### 1. what is it?
 
 cjdns is the name of both the daemon and the network protocol that implements a secure, scalable and fast network with minimal configuration.
 
@@ -9,21 +9,19 @@ It also implements end-to-end encryption out of the box, so any communication in
 
 The cjdns project is currently in alpha, and a test network called Hyperboria with services like mail, social network and irc chat servers, exist with hundreds of nodes spread across the world.
 
-2. how can you install it? 
+### 2. how can you install it? 
 
-  Pick your OS and follow the instructions. Its not hard, but does involve some compiling.
+Pick your OS and follow the instructions. Its not hard, but does involve some compiling.
 
-  [Arch](install/arch.md)
-  [Debian Jessie](install/debian-jessie.md)
-  [Debian Wheezy](install/debian-wheezy.md)
-  [Fedora](install/fedora.md)
-  [OpenWRT](install/openwrt.md)
-  [MacOSX](install/osx.md)
-  [Windows(via cross-compiling)](install/windows.md)
+* [Arch](install/arch.md)
+* [Debian Jessie](install/debian-jessie.md)
+* [Debian Wheezy](install/debian-wheezy.md)
+* [Fedora](install/fedora.md)
+* [OpenWRT](install/openwrt.md)
+* [MacOSX](install/osx.md)
+* [Windows(via cross-compiling)](install/windows.md)
 
-3. Setup
-
-3. generate a conf
+### 3. generate a conf
 
 Generate a configuration file with the write permissions by doing
 
@@ -35,7 +33,7 @@ If someone steals your configuration, they can impersonate you.
 **Note:** Backup your configuration file to somewhere safe locally to prevent
 an embarassing loss of peer connectivity in case you delete the file by accident. 
 
-4. Find a public peer
+### 4. Find a public peer
 
 cjdns's network operates on a friend-of-a-friend model. This means, that to connect to 
 the network you need to find nodes called peers which allow you to connect to the network.
@@ -67,8 +65,9 @@ Thats it, you're done! Fire up cjdns with
 
 and its time to start testing things and getting involved
 
-4. Now you should be on the net...
-  + testing whether you're connected
+### 5. Now you should be on the net...
+
+#### Testing whether you're connected
 
 Open your browser and open [this link](http://h.cjdns.ca). If it works, then
 congratulations! You just opened your first Hyperboria link. You can verify this
@@ -76,8 +75,9 @@ by killed the cjdns daemon and trying the link again.
 
 If it didn't work, your problem could be one of the following
 
-  + troubleshooting if you're not
-    * do you have a tun device?
+#### Troubleshooting
+
+##### do you have a tun device?
 
 First, check that your tunnel device exists and is working fine.
 
@@ -99,7 +99,7 @@ If you're probably using a VPS based on the OpenVZ virtualization platform. Ask 
 TUN/TAP device - this is standard protocol so they should know exactly what you
 need. 
 
-    * is your command line working? (ping6, curl)
+##### is the network working? 
 
 Open your terminal, go to the cjdns folder and do
 
@@ -120,7 +120,7 @@ If this works as well, then you probably have a browser issue.
 If it doesn't, it indicates that something is wrong with the ipv6 setup of your OS.
 Please check the OS docs and try to resolve the issue.
 
-    * is your chrome/firefox working?
+##### is your chrome/firefox working?
 
 Browser support issues are mostly related to disabled or wrong ipv6 handling.
 If Chrome doesn't work, try firefox, and vice-versa.
