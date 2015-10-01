@@ -175,4 +175,4 @@ Reddit fan? [Uppit](http://uppit.us)
 
 ...and more, but we'll tell you about them when you join us ;) **tease tease**
 
-See you at Hyperboria!
+See you on Hyperboria!
