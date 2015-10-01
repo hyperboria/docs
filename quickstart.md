@@ -167,7 +167,7 @@ Web based IRC clients will likely not work since their servers are not (yet) con
 
 #### Mail and Social Network
 
-To setup your mail on Hyperboria, head over to (Hyperboria.name)[http://hyperboria.name]
+To setup your mail on Hyperboria, head over to [Hyperboria.name](http://hyperboria.name)
 
 Head over to [Social Node](http://socialno.de) if you want a facebook-like social network.
 
