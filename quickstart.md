@@ -1,6 +1,6 @@
 ## Getting going with cjdns
 
-### 1. what is it?
+### Introduction
 
 cjdns is the name of both the daemon and the network protocol that implements a secure, scalable and fast network with minimal configuration.
 
@@ -9,7 +9,9 @@ It also implements end-to-end encryption out of the box, so any communication in
 
 The cjdns project is currently in alpha, and a test network called Hyperboria with services like mail, social network and irc chat servers, exist with hundreds of nodes spread across the world.
 
-### 2. how can you install it? 
+This document will help you setup and connect to the Hyperboria network, to get a taste of what its like.
+
+### Step 1: Install cjdns
 
 Pick your OS and follow the instructions. Its not hard, but does involve some compiling.
 
@@ -21,7 +23,7 @@ Pick your OS and follow the instructions. Its not hard, but does involve some co
 * [MacOSX](install/osx.md)
 * [Windows(via cross-compiling)](install/windows.md)
 
-### 3. generate a conf
+### Step 2: Generate a configuration file
 
 Generate a configuration file with the write permissions by doing
 
@@ -33,7 +35,7 @@ If someone steals your configuration, they can impersonate you.
 **Note:** Backup your configuration file to somewhere safe locally to prevent
 an embarassing loss of peer connectivity in case you delete the file by accident. 
 
-### 4. Find a public peer
+### Step 3: Find a public peer
 
 cjdns's network operates on a friend-of-a-friend model. This means, that to connect to 
 the network you need to find nodes called peers which allow you to connect to the network.
@@ -65,7 +67,7 @@ Thats it, you're done! Fire up cjdns with
 
 and its time to start testing things and getting involved
 
-### 5. Now you should be on the net...
+### Step 4: Testing the network
 
 #### Testing whether you're connected
 
@@ -77,7 +79,7 @@ If it didn't work, your problem could be one of the following
 
 #### Troubleshooting
 
-##### do you have a tun device?
+##### check TUN device setup
 
 First, check that your tunnel device exists and is working fine.
 
@@ -99,7 +101,7 @@ If you're probably using a VPS based on the OpenVZ virtualization platform. Ask 
 TUN/TAP device - this is standard protocol so they should know exactly what you
 need. 
 
-##### is the network working? 
+##### Check basic network/IPv6 setup 
 
 Open your terminal, go to the cjdns folder and do
 
@@ -120,7 +122,7 @@ If this works as well, then you probably have a browser issue.
 If it doesn't, it indicates that something is wrong with the ipv6 setup of your OS.
 Please check the OS docs and try to resolve the issue.
 
-##### is your chrome/firefox working?
+##### Check browser
 
 Browser support issues are mostly related to disabled or wrong ipv6 handling.
 If Chrome doesn't work, try firefox, and vice-versa.
@@ -132,20 +134,36 @@ In Firefox, you'll need to make a few settings changes, navigate to [about:confi
     browser.fixup.alternate.enable to false
     network.dns.disableIPv6 to false
 
-    * What if nothing works?
+##### Get volunteer support
 
 If nothing works, tell us whats wrong at [#cjdns](http://chat.efnet.org/irc.cgi?chan=%23cjdns)
 
 Note that Hyperboria and cjdns is run by a group of volunteers so be patient with us if you don't 
 get immediate responses
 
-5. cool, now you're on
-  + secure your device
-  + get on hypeirc
-  + find something to do
-6. ???
-7. Profit
+### Step 5: Show Time!
 
-:D
+#### IRC first
 
+The hyperboria communication hub pretty much consists of the HypeIRC IRC network. Getting on to it
+helps you with all the basic stuff like finding peers, connecting with other members of the community,
+support and some really cool people and sites.
 
+To get on to the HypeIRC network, connect to servers `hypeirc.cjdns.ca` or `irc.hypeirc.net` or use
+both servers as a failover.
+
+Ensure that your IRC client has IPv6 support. 
+
+Web based IRC clients will likely not work since their servers are not (yet) connected to the Hyperboria network.
+
+#### Mail and Social Network
+
+To setup your mail on Hyperboria, head over to (Hyperboria.name)[http://hyperboria.name]
+
+Head over to [Social Node](http://socialno.de) if you want a facebook-like social network.
+
+Reddit fan? [Uppit](http://uppit.us)
+
+...and more, but we'll tell you about them when you join us ;) **tease tease**
+
+See you at Hyperboria!
