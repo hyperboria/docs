@@ -52,10 +52,22 @@ Sample Files:
     "longitude":0,
     "latitude":0,
     "altitude":0,
-    "country":"Genovia",
-    "region":"Corsica",
-    "municipality":"Bastia",
-    "uri":"http://genovia.mesh.local.gen"
+    "continent":"NA",
+    "region":"Cascadia",
+    "municipality":"Seattle",
+    "uri":"http://https://www.seattlemesh.net/"
   }
 }
+```
+
+## Regarding continent codes
+
+```
+Asia : AS
+South America: SA
+North America: NA
+Africa: AF
+Europe: EU
+Antarctica: AN
+Oceania: OC
 ```
