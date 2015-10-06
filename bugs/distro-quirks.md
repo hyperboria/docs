@@ -39,3 +39,16 @@ and Cjdns should start correctly. To keep IPv6 on after reboot add `ipv6` to the
 ```bash
 $ sudo sh -c 'echo ipv6 >> /etc/modules'
 ```
+
+## Windows
+
+### Not resolving DNS correctly
+
+Windows is having problems with resolving CNAME records referencing AAAA only records.
+
+The fix is easy, you have to lie to windows saying that you have an existing IPv6 connection under your main network card.
+
+To do so enter your main network card contex menu, select `Properties` and enter IPv6 configuration.
+Select manual configuration and type `::1` as your IPv6 address, DNS fields can be empty as you don't have a IPv6 communication after all.
+Click OK and after that CNAME records will be resolved correctly.
+
