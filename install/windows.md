@@ -2,6 +2,7 @@
 
 * If you're trying to build **on** windows, forget it, you wouldn't build software for an iPhone
 **on** an iPhone...
+* you must have at least Windows Vista because cjdns requires ConvertInterfaceLuidToGuid function https://msdn.microsoft.com/en-us/library/windows/hardware/ff546156%28v=vs.85%29.aspx indtroduced in Vista.
 
 ## Build Prerequisites
 
