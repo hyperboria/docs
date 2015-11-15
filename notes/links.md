@@ -26,5 +26,6 @@
 
 ## Appliances
 
-- [Commotion Wireless](https://commotionwireless.net)
+- [Commotion Wireless](
+https://commotionwireless.net/blog/2013/02/02/case-study-red-hook-initiative-wifi-tidepools/)
 - [Serval Project](http://servalproject.org)
