@@ -8,7 +8,7 @@ Ultimately, we hope to build a viable alternative to the regular internet, which
 
 Our community mirrors the technology that we are building. Development is distributed across many communities around the world, and we stitch together smaller networks with UDP links over the internet, and communicate largely over HypeIRC, available at irc://irc.hypeirc.net.
 
-To find peers, `/join #peering`. To Help with development, `/join #cjdns`. To assist us in documenting cjdns and Hyperboria, `/join #documentation`.
+To find peers, `/join #peering`. To Help with development, `/join #cjdns`. To assist us in documenting cjdns and Hyperboria, `/join #documentation`. In case, you have no peers so far and want to access hyperirc, you can use one of the [public peers](https://github.com/hyperboria/peers) or this [node](https://jointhe.hyperboria.network/).
 
 ## Can I run Cjdns in a virtual machine?
 
