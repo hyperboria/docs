@@ -5,10 +5,11 @@ author: [kpcyrd](https://github.com/kpcyrd)
 
 original location: https://github/ansuz/cjdns-pr
 
-```quote
-We have the means and we have the technology to end mass surveillance without any legislative action at all, without any policy changes. By basically adopting changes like making encryption a universal standard - where all communications are encrypted by default - we can end mass surveillance not just in the United States but around the world.
-- Edward Snowden
-```
+
+> We have the means and we have the technology to end mass surveillance without any legislative action at all, without any policy changes. By basically adopting changes like making encryption a universal standard - where all communications are encrypted by default - we can end mass surveillance not just in the United States but around the world.
+
+> \- Edward Snowden
+
 
 ## The current internet
 

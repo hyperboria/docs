@@ -83,7 +83,7 @@ Longer Answer: You generally need root permissions to create the encrypted tunne
 
 ## What systems are supported?
 
-Short Answer: not windows.
+Short Answer: all we can but some get less attention than other (I am looking at you Windows).
 
 Long Answer: Check the dependency list. You need access to a C99 compiler, NodeJS, Python, LibUV...
 

@@ -74,6 +74,7 @@ You can contribute to its documentaion: https://github.com/hyperboria/docs
   - [SecComp](Seccomp.md)
   - [Analyzing network IO](TrafficAnalisys.md)
   - Known issues
+    - [Horizon](bugs/horizon.md)
     - [Black Hole](bugs/black-hole.md)
     - [Secret Santa](bugs/santa.md)
     - Configurator timeout
