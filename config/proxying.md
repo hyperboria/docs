@@ -31,7 +31,7 @@ and put `localhost` as hostname and `8080` as port.
 If you want your normal traffic to travel directly and only cjdns traffic to connect though the proxy,
 you have to use Proxy auto-config (PAC).
 
-The following PAC file checks if the host you are connecting to is a cjdns IPV6 address, if not tries to resolve it. (If that fails, it usually means current DNS server is not IPv6 capable, so it redirects the traffic through the proxy)Finally, if resolving via DNS is successful (and the current host is IPv6 capable) it checks whether the address is in cjdns space.
+The following PAC file checks if the host you are connecting to is a cjdns IPV6 address, if not tries to resolve it. (If that fails, it usually means current DNS server is not IPv6 capable, so it redirects the traffic through the proxy). Finally, if resolving via DNS is successful (and the current host is IPv6 capable) it checks whether the address is in cjdns space.
 
 ```js
 function FindProxyForURL(url, host) {
