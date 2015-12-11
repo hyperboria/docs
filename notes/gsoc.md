@@ -36,4 +36,4 @@ TODO: need to think about how remote-friendly this idea is
 
 ### DNS
 
-See [DNS, with trust based on peering-like agreements](dns.html#dns-with-trust-based-on-peering-like-agreements)
+See [DNS, with trust based on peering-like agreements](dns.md#dns-with-trust-based-on-peering-like-agreements)
