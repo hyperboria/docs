@@ -31,10 +31,10 @@ You can contribute to its documentaion: https://github.com/hyperboria/docs
 ## The cjdns routing protocol
 
 - About
-  - [Goals](projectGoals.md) ([russian](projectGoals_ru.md))
+  - [Goals](project-goals.md) ([russian](project-goals-ru.md))
   - [Original whitepaper](Whitepaper.md)
   - [Brief intro](intro.md)
-  - [Security Specification](security_specification.md)
+  - [Security Specification](security-specifications.md)
 - Installation
   - [Most Linuxes](install/linux.md) *TODO*
   - [OpenWrt](install/openwrt.md)
@@ -48,31 +48,31 @@ You can contribute to its documentaion: https://github.com/hyperboria/docs
   - [FreeBSD](install/freebsd.md) *TODO*
   - [OpenBSD](install/openbsd.md) *TODO*
   - [Windows](install/windows.md)
-    - [Building *on* Windows](notes/build-on-windows.md)
-    - [Securing your Windows system](notes/windows-firewall.md)
+    - [Building *on* Windows](install/build-on-windows.md)
+    - [Securing your Windows system](config/windows-firewall.md)
 - Usage
-  - [Setup](configure.md)
-  - [Operator guidelines](cjdns/Operator_Guidelines.md)
-  - [Securing your system](network-services.md)
+  - [Setup](config/configure.md)
+  - [Operator guidelines](cjdns/operator-guidelines.md)
+  - [Securing your system](config/network-services.md)
   - [Tools](tools/index.md) *TODO*
     - [Third party tools](ctrls.md)
-  - [Admin API](admin-api.md)
+  - [Admin API](cjdns/admin-api.md)
 - Working with cjdns
   - [Anatomy of cjdroute](cjdns/anatomy.md)
   - [Peering over UDP](cjdns/peering-over-UDP-IP.md)
   - [nodeinfo.json](cjdns/nodeinfo-json.md)
   - [Changelog](cjdns/changelog.md)
 - HowTo
-  - [Using cjdns as a VPN](tunnel.md)
-  - [Shorewall and VPN gateway](shorewall_and_vpn_gateway_howto.md)
-  - [NAT gateway for non-cjdns nodes](nat-gateway.md)
-  - [Autostart at login](autostart-at-login.md)
-  - [Run as non-root user](non-root-user.md)
+  - [Using cjdns as a VPN](config/tunnel.md)
+  - [Shorewall and VPN gateway](config/shorewall-and-vpn-gateway-howto.md)
+  - [NAT gateway for non-cjdns nodes](config/nat-gateway.md)
+  - [Autostart at login](config/autostart-at-login.md)
+  - [Run as non-root user](config/non-root-user.md)
 - Troubleshooting
   - [Read this first](bugs/policy.md)
-  - [Memory leaks](debugging_memory_leaks.md)
-  - [SecComp](Seccomp.md)
-  - [Analyzing network IO](TrafficAnalisys.md)
+  - [Memory leaks](bugs/debugging-memory-leaks.md)
+  - [SecComp](bugs/Seccomp.md)
+  - [Analyzing network IO](traffic-analysis.md)
   - Known issues
     - [Horizon](bugs/horizon.md)
     - [Black Hole](bugs/black-hole.md)
@@ -93,10 +93,10 @@ These notes are unstructured, and most of them likely outdated.
 * [ansuz' Q&A with Arceliar](notes/arc-workings.md)
 * [cjdns-core](notes/cjdns-core.md)
 * [cryptography](notes/cryptography.md)
-* [cjdroute.conf](notes/cjdroute.md)
+* [cjdroute.conf](notes/cjdroute-conf.md)
 * [./do](notes/do.md)
 * [DNS ideas](notes/dns.md)
-* [DJC layer model](djc_layer_model.md)
+* [DJC layer model](djc-layer-model.md)
 * [Benchmarks](benchmark.txt)
 * [Fun with the switch](switchfun.txt)
 
