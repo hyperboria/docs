@@ -6,7 +6,7 @@ Many of the Hyperboria's nodes are connected over the internet, making it at lea
 
 Ultimately, we hope to build a viable alternative to the regular internet, which we call [clearnet](https://www.urbandictionary.com/define.php?term=clearnet). Wherever we see hierarchical network structures, we attempt to replace them with [decentralized structures](http://redecentralize.org/).
 
-Our community mirrors the technology that we are building. Development is distributed across many communities around the world, and we stitch together smaller networks with UDP links over the internet, and communicate largely over HypeIRC, available at irc://irc.fc00.io.
+Our community mirrors the technology that we are building. Development is distributed across many communities around the world, and we stitch together smaller networks with UDP links over the internet, and communicate largely over IRC, available at irc://irc.fc00.io (development) and irc://irc.hypeirc.net (general communication).
 
 To find peers, `/join #peering`. To Help with development, `/join #cjdns`. To assist us in documenting cjdns and Hyperboria, `/join #documentation`. In case, you have no peers so far and want to access hyperirc, you can use one of the [public peers](https://github.com/hyperboria/peers) or this [node](https://jointhe.hyperboria.network/).
 

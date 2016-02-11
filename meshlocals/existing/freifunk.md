@@ -6,6 +6,6 @@ Berlin, and Hamburg.
 - kpcyrd
 - larsg
 
-You can find both of us in #cjdns on EFnet, hackint and HypeIRC.
+You can find both of us in #cjdns on EFnet, hackint and irc.fc00.io.
 
 More information about Freifunk: https://freifunk.net

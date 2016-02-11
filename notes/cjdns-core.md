@@ -4,7 +4,7 @@
 
 A number of us have begun the task of documenting and reverse engineering the cjdns core. The "core" refers to the core functionality required to implement a cjdns-compatible router.
 
-To speak with those involved, join **HypeIRC/#documentation**
+To speak with those involved, join **irc.fc00.io/#documentation**
 
 ## Status
 
