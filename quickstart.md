@@ -154,14 +154,12 @@ get immediate responses
 
 #### IRC first
 
-The hyperboria communication hub pretty much consists of the HypeIRC IRC network. Getting on to it
-helps you with all the basic stuff like finding peers, connecting with other members of the community,
-support and some really cool people and sites.
+There are two notable IRC networks in Hype:
 
-To get on to the HypeIRC network, connect to servers `hypeirc.cjdns.ca` or `irc.hypeirc.net` or use
-both servers as a failover.
+* irc.hypeirc.net — general-purpose network with not a lot of rules.
+* irc.fc00.io — a more development-focused moderated IRC server.
 
-Ensure that your IRC client has IPv6 support. 
+Ensure that your IRC client has IPv6 support.
 
 Web based IRC clients will likely not work since their servers are not (yet) connected to the Hyperboria network.
 

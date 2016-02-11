@@ -48,7 +48,7 @@ Pull from there, and push there first.
 If the canonical repo and mirror at [github.com/hyperboria/docs](https://github.com/hyperboria/docs) diverge,
 the canonical repo's respective branch shall be force-pushed to the mirror.
 
-If you must create a new file, come talk to us on HypeIRC #documentation about where it should be located. If it deals with configuration of cjdns or the host system, it should be located in `config/`. Installation guides go in `install/`, bugs or quirks go in `bugs/`. Files **must** adhere to the existing naming scheme: `lower-case-with-hyphens.md` if they are to be accepted into the repository.
+If you must create a new file, come talk to us on irc.fc00.io #documentation about where it should be located. If it deals with configuration of cjdns or the host system, it should be located in `config/`. Installation guides go in `install/`, bugs or quirks go in `bugs/`. Files **must** adhere to the existing naming scheme: `lower-case-with-hyphens.md` if they are to be accepted into the repository.
 
 
 ## Documentation in cjdns.git/doc
