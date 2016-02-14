@@ -17,86 +17,86 @@ You can contribute to its documentaion: https://github.com/hyperboria/docs
 
 ## About Hyperboria
 
-- [Asking Questions](wtfm.md) *TODO*
-- [Peering](faq/peering.md)
-- [Security](faq/security.md)
-- [Meshlocals](meshlocals/intro.md)
-  - [Meshlocals around the world](meshlocals/existing/index.md)
-  - [Starting a Meshlocal](meshlocals/diy.md)
-- [FAQ](faq/general.md)
-- [Achievements](achievements.md)
-- [Glossary](faq/glossary.md)
+- [Asking Questions](wtfm.html) *TODO*
+- [Peering](faq/peering.html)
+- [Security](faq/security.html)
+- [Meshlocals](meshlocals/intro.html)
+  - [Meshlocals around the world](meshlocals/existing/index.html)
+  - [Starting a Meshlocal](meshlocals/diy.html)
+- [FAQ](faq/general.html)
+- [Achievements](achievements.html)
+- [Glossary](faq/glossary.html)
 
 
 ## The cjdns routing protocol
 
 - About
-  - [Goals](project-goals.md) ([russian](project-goals-ru.md))
-  - [Original whitepaper](Whitepaper.md)
-  - [Brief intro](intro.md)
-  - [Security Specification](security-specifications.md)
+  - [Goals](project-goals.html) ([russian](project-goals-ru.html))
+  - [Original whitepaper](Whitepaper.html)
+  - [Brief intro](intro.html)
+  - [Security Specification](security-specifications.html)
 - Installation
-  - [Most Linuxes](install/linux.md) *TODO*
-  - [OpenWrt](install/openwrt.md)
-  - [Android](install/android.md) *TODO*
-  - [Firefox OS](install/firefoxos.md) *TODO*
-  - [OS X](install/osx.md)
-  - [Debian Wheezy](install/debian-wheezy.md)
-  - [Debian Jessie](install/debian-jessie.md)
-  - [Arch](install/arch.md)
-  - [Fedora](install/fedora.md)
-  - [FreeBSD](install/freebsd.md) *TODO*
-  - [OpenBSD](install/openbsd.md) *TODO*
-  - [Windows](install/windows.md)
-    - [Building *on* Windows](install/build-on-windows.md)
-    - [Securing your Windows system](config/windows-firewall.md)
+  - [Most Linuxes](install/linux.html) *TODO*
+  - [OpenWrt](install/openwrt.html)
+  - [Android](install/android.html) *TODO*
+  - [Firefox OS](install/firefoxos.html) *TODO*
+  - [OS X](install/osx.html)
+  - [Debian Wheezy](install/debian-wheezy.html)
+  - [Debian Jessie](install/debian-jessie.html)
+  - [Arch](install/arch.html)
+  - [Fedora](install/fedora.html)
+  - [FreeBSD](install/freebsd.html) *TODO*
+  - [OpenBSD](install/openbsd.html) *TODO*
+  - [Windows](install/windows.html)
+    - [Building *on* Windows](install/build-on-windows.html)
+    - [Securing your Windows system](config/windows-firewall.html)
 - Usage
-  - [Setup](config/configure.md)
-  - [Operator guidelines](cjdns/operator-guidelines.md)
-  - [Securing your system](config/network-services.md)
-  - [Tools](tools/index.md) *TODO*
-    - [Third party tools](ctrls.md)
-  - [Admin API](cjdns/admin-api.md)
+  - [Setup](config/configure.html)
+  - [Operator guidelines](cjdns/operator-guidelines.html)
+  - [Securing your system](config/network-services.html)
+  - [Tools](tools/index.html) *TODO*
+    - [Third party tools](ctrls.html)
+  - [Admin API](cjdns/admin-api.html)
 - Working with cjdns
-  - [Anatomy of cjdroute](cjdns/anatomy.md)
-  - [Peering over UDP](cjdns/peering-over-UDP-IP.md)
-  - [nodeinfo.json](cjdns/nodeinfo-json.md)
-  - [Changelog](cjdns/changelog.md)
+  - [Anatomy of cjdroute](cjdns/anatomy.html)
+  - [Peering over UDP](cjdns/peering-over-UDP-IP.html)
+  - [nodeinfo.json](cjdns/nodeinfo-json.html)
+  - [Changelog](cjdns/changelog.html)
 - HowTo
-  - [Using cjdns as a VPN](config/tunnel.md)
-  - [Shorewall and VPN gateway](config/shorewall-and-vpn-gateway-howto.md)
-  - [NAT gateway for non-cjdns nodes](config/nat-gateway.md)
-  - [Autostart at login](config/autostart-at-login.md)
-  - [Run as non-root user](config/non-root-user.md)
+  - [Using cjdns as a VPN](config/tunnel.html)
+  - [Shorewall and VPN gateway](config/shorewall-and-vpn-gateway-howto.html)
+  - [NAT gateway for non-cjdns nodes](config/nat-gateway.html)
+  - [Autostart at login](config/autostart-at-login.html)
+  - [Run as non-root user](config/non-root-user.html)
 - Troubleshooting
-  - [Read this first](bugs/policy.md)
-  - [Memory leaks](bugs/debugging-memory-leaks.md)
-  - [SecComp](bugs/Seccomp.md)
-  - [Analyzing network IO](traffic-analysis.md)
+  - [Read this first](bugs/policy.html)
+  - [Memory leaks](bugs/debugging-memory-leaks.html)
+  - [SecComp](bugs/Seccomp.html)
+  - [Analyzing network IO](traffic-analysis.html)
   - Known issues
-    - [Horizon](bugs/horizon.md)
-    - [Black Hole](bugs/black-hole.md)
-    - [Secret Santa](bugs/santa.md)
+    - [Horizon](bugs/horizon.html)
+    - [Black Hole](bugs/black-hole.html)
+    - [Secret Santa](bugs/santa.html)
     - Configurator timeout
-      - [Firewall on localhost](bugs/configurator-timeout.md)
-      - [UDP overflow](bugs/connectTo-overflow.md)
-    - ~~[Hidden Peers](bugs/hidden-peers.md)~~
-    - [OS/distro-specific quirks](bugs/distro-quirks.md)
-  - [Reporting bugs](bugs/reporting.md)
+      - [Firewall on localhost](bugs/configurator-timeout.html)
+      - [UDP overflow](bugs/connectTo-overflow.html)
+    - ~~[Hidden Peers](bugs/hidden-peers.html)~~
+    - [OS/distro-specific quirks](bugs/distro-quirks.html)
+  - [Reporting bugs](bugs/reporting.html)
 
 
 ## Random notes, work-in-progress, inbox
 
 These notes are unstructured, and most of them likely outdated.
 
-* [Interesting links](notes/links.md)
-* [ansuz' Q&A with Arceliar](notes/arc-workings.md)
-* [cjdns-core](notes/cjdns-core.md)
-* [cryptography](notes/cryptography.md)
-* [cjdroute.conf](notes/cjdroute-conf.md)
-* [./do](notes/do.md)
-* [DNS ideas](notes/dns.md)
-* [DJC layer model](djc-layer-model.md)
+* [Interesting links](notes/links.html)
+* [ansuz' Q&A with Arceliar](notes/arc-workings.html)
+* [cjdns-core](notes/cjdns-core.html)
+* [cryptography](notes/cryptography.html)
+* [cjdroute.conf](notes/cjdroute-conf.html)
+* [./do](notes/do.html)
+* [DNS ideas](notes/dns.html)
+* [DJC layer model](djc-layer-model.html)
 * [Benchmarks](benchmark.txt)
 * [Fun with the switch](switchfun.txt)
 
