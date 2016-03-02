@@ -2,7 +2,6 @@ CultureSpy worked out how to compile cjdns for Windows for Windows. So if you ha
 
 # Building cjdns On Windows For Windows
 
-
 Install Cygwin from [here](https://cygwin.com/install.html)
 
 Extra packages to install, if they're not installed by default:
@@ -33,9 +32,7 @@ make
 
 [Install node.js](https://nodejs.org/download/)
 
-
 Get the [cjdns source](https://github.com/cjdelisle/cjdns)
-
 
 Create `C:\tmp`
 
@@ -61,6 +58,7 @@ Make a small edit to the cjdns JS build system:
      logLevel:       process.env['Log_LEVEL'] || 'DEBUG'
  }, function (builder, waitFor) {
 ```
+
 (that is, replace the line that says `tempDir: '/tmp'` with `tempDir: 'C:\\tmp'`)
 
 This works around an issue with the detection of the tmp directory.
