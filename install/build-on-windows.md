@@ -88,6 +88,6 @@ The system churns for a while, hopefully producing no errors. It will eventually
 
 Or put cjdroute.exe wherever you like.
 
-Continue following [instructions here](../windows.md#run-time-dependencies)
+Continue following [instructions here](windows.md#run-time-dependencies)
 
-And obviously [secure your shit](windows-firewall.md)
+And obviously [secure your shit](../config/windows-firewall.md)
