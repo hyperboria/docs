@@ -55,7 +55,7 @@ Sample Files:
     "continent":"NA",
     "region":"Cascadia",
     "municipality":"Seattle",
-    "uri":"http://https://www.seattlemesh.net/"
+    "uri":"https://www.seattlemesh.net/"
   }
 }
 ```
