@@ -1,3 +1,40 @@
+Why?
+====
+If you're here from the hyperboria docs, you're already sold - proceed to Installing.  But why should a Fedora user install cjdns?  I'll mention just two contrasting use cases, one mundane and the other paranoid.
+
+VPN Mesh
+--------
+Configuring a point to point VPN connection with openvpn is fairly straightforward, as
+is configuring a centralized VPN server and clients.  However, when every
+node in the VPN network needs to talk securely with many other nodes,
+relaying every packet through the central server becomes a drag
+on performance, and a single point of failure.  Mesh VPNs, like tinc and
+cjdns automatically create point to point connections based on a shared
+overall configuration.  Each node only needs a connection to one or more
+peers (that can be reused) to get things started.  
+
+Cjdns, however, goes
+much further than tinc.  On a local LAN or mesh with broadcast, it is zero
+configuration.  Peers are automatically discovered via the 0xFC00 layer 2
+protocol.  There is no shared configuration - the only thing required is adding
+one or more (for redundancy) internet peers when no peers on the local LAN or mesh are available. 
+Even better, when your node is mobile, and you have geographically separated peers configured,
+cjdns automatically switches to a faster peer as the relative performance changes.
+
+Darknet
+-------
+In a widespread VPN, address assignment must be coordinated by a central
+authority.  The internet also uses centralized IP assignment, which
+means a government can take away your IP at any time.  Cjdns uses
+CryptoGraphic Addressing (CGA).  Your IP6 is the double SHA-512 of your public
+key truncated to 128 bits.  Your IP is as safe as the private key pair
+which produced it, and cannot [insert standard cryptography disclaimer] be
+spoofed.  Most mesh VPNs decrypt packets before routing to a new node.  This means that if
+a relay node is compromised in a conventional VPN, it can see and even alter packets.
+All cjdns packets are end to end encrypted - relay nodes are untrusted.
+There is no centralized routing.  If a node is "blackholing" packets
+for some reason - a sender simply doesn't route through that node anymore.  (But see Security below.)
+
 Installing CJDNS on Fedora
 ==========================
 
@@ -37,13 +74,21 @@ If you are on a laptop, you may find that after waking up from suspend or hibern
 sudo systemctl enable cjdns-resume
 ```
 
+Security
+--------
+By default, Fedora Workstation will treat the tun device created by cjdroute as "public", with SSH being the only incoming port allowed.  There is no additional exposure with cjdns and the default Fedora firewall.  If you have modified the firewall config beyond opening additional incoming ports, be sure that the cjdns tun is treated as public - because anyone in the world can attempt to connect to you through it.  Sometimes, people configure their firewall to treat all tun devices as "VPN", and therefore somewhat more trusted.  This would be a mistake with cjdns.  It is a VPN, for sure, but one anyone in the world can join.
+
+Cjdns public keys are based on Elliptic Curves.  There is a known quantum algorithm that could be used to crack them if quantum computers with sufficient qubits are ever built.  The solution when that happens is larger keys - which are more cumbersome.
+
+Cjdns relies on a Distributed Hash Table - which is vulnerable to a Denial of Service attack known as "Sybil".  This attack can block specific updates to the DHT - to prevent your node from joining a mesh, for instance.
+
 Advanced config
 ---------------
 You may install a network service that depends on cjdns, for instance you might install thttpd to serve up 
 [nodeinfo.json](https://docs.meshwith.me/en/cjdns/nodeinfo.json.html).  If thttpd is configured to listen only on your cjdns IP, then it will not start until cjdns is up and running.  Add ```After=cjdns-wait-online.service``` to ```thttpd.service``` to hold off starting the service until cjdns has the tunnel up and ready.
 
-Feedback During Testing
------------------------
+Feedback
+--------
 If you succeed, leave karma and feedback on https://bodhi.fedoraproject.org/updates/FEDORA-2016-8fb1a8db25 so that the package can move from testing to production.
 
 Installing CJDNS on Fedora 22
