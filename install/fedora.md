@@ -82,6 +82,8 @@ Public keys for cjdns are based on Elliptic Curves.  There is a known quantum al
 
 The Distributed Hash Table algorithm is a core component of cjdns - which is vulnerable to a Denial of Service attack known as "Sybil".  This attack can block specific updates to the DHT - to prevent your node from joining a mesh, for instance.
 
+On the positive side, you can safely use telnet to cjdns IPs and the http protocol is automatically encrypted (but you need a secure DNS or raw ip to be sure you are talking to the right node).  Many other protocols are automatically encrypted while using cjdns.  In general, connecting to a raw cjdns IP is functionally equivalent to SSL/TLS with both client and server authentication.
+
 Advanced config
 ---------------
 You may install a network service that depends on cjdns, for instance you might install thttpd to serve up 
