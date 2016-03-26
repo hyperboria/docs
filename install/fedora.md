@@ -13,8 +13,8 @@ cjdns automatically create point to point connections based on a shared
 overall configuration.  Each node only needs a connection to one or more
 peers (that can be reused) to get things started.  
 
-Cjdns, however, goes
-much further than tinc.  On a local LAN or mesh with broadcast, it is zero
+With cjdns, however, things are
+much better than with tinc.  On a local LAN or mesh with broadcast, it is zero
 configuration.  Peers are automatically discovered via the 0xFC00 layer 2
 protocol.  There is no shared configuration - the only thing required is adding
 one or more (for redundancy) internet peers when no peers on the local LAN or mesh are available. 
@@ -38,7 +38,7 @@ for some reason - a sender simply doesn't route through that node anymore.  (But
 Installing CJDNS on Fedora
 ==========================
 
-Cjdns was added to the Fedora repository beginning with Fedora 23.  It is in the testing repository until it gains sufficient positive karma.  To install:
+Since Fedora 23, cjdns is in the Fedora repository.  It is in the testing repository until it gains sufficient positive karma.  To install:
 
 ```bash
 sudo dnf install cjdns cjdns-tools cjdns-selinux --enablerepo=updates-testing
@@ -78,9 +78,9 @@ Security
 --------
 By default, Fedora Workstation will treat the tun device created by cjdroute as "public", with SSH being the only incoming port allowed.  There is no additional exposure with cjdns and the default Fedora firewall.  If you have modified the firewall config beyond opening additional incoming ports, be sure that the cjdns tun is treated as public - because anyone in the world can attempt to connect to you through it.  Sometimes, people configure their firewall to treat all tun devices as "VPN", and therefore somewhat more trusted.  This would be a mistake with cjdns.  It is a VPN, for sure, but one anyone in the world can join.
 
-Cjdns public keys are based on Elliptic Curves.  There is a known quantum algorithm that could be used to crack them if quantum computers with sufficient qubits are ever built.  The solution when that happens is larger keys - which are more cumbersome.
+Public keys for cjdns are based on Elliptic Curves.  There is a known quantum algorithm that could be used to crack them if quantum computers with sufficient qubits are ever built.  The solution when that happens is larger keys - which are more cumbersome.
 
-Cjdns relies on a Distributed Hash Table - which is vulnerable to a Denial of Service attack known as "Sybil".  This attack can block specific updates to the DHT - to prevent your node from joining a mesh, for instance.
+The Distributed Hash Table algorithm is a core component of cjdns - which is vulnerable to a Denial of Service attack known as "Sybil".  This attack can block specific updates to the DHT - to prevent your node from joining a mesh, for instance.
 
 Advanced config
 ---------------
