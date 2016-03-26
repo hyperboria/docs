@@ -35,8 +35,8 @@ All cjdns packets are end to end encrypted - relay nodes are untrusted.
 There is no centralized routing.  If a node is "blackholing" packets
 for some reason - a sender simply doesn't route through that node anymore.  (But see Security below.)
 
-Installing CJDNS on Fedora
-==========================
+Installing CJDNS on Fedora and EPEL
+===================================
 
 Since Fedora 23, cjdns is in the Fedora repository.  It is in the testing repository until it gains sufficient positive karma.  To install:
 
@@ -48,12 +48,16 @@ The cjdns-tools package has peerStats and other nodejs tools.  Python versions o
 
 The cjdns-selinux package has an selinux sandbox for cjdroute, to prevent it from doing anything wonky through accident or malice.  Some don't trust selinux (because of NSA origins), but it is installed by default on Fedora - so if you are running Fedora you want this.
 
+For rhel6 and rhel7 with the EPEL repo, use the epel-testing repo instead of updates-testing.
+
 Start cjdroute:
 
 ```bash
 sudo systemctl enable cjdns #This sets cjdns to be started on boot. if you don't want that, feel free to leave this line out.
 sudo systemctl start cjdns #This actually starts cjdroute.
 ````
+
+For rhel6, use ```start cjdns``` instead of systemctl.  Add to /etc/rc.d/rc.local to enable on boot.
 
 Checking the logs:
 ```bash
@@ -68,11 +72,15 @@ After changing anything in the configuration, restart cjdns:
 sudo systemctl restart cjdns
 ```
 
+For rhel6, use ```restart cjdns``` instead of systemctl.
+
 If you are on a laptop, you may find that after waking up from suspend or hibernate, cjdroute takes a minute or two to make coffee and figure out what just happened.  To speed this up, just restart cjdroute.  To always restart cjdroute upon awakening, enable the cjdns-resume service:
 
 ```bash
 sudo systemctl enable cjdns-resume
 ```
+
+For rhel6, ... wait, why would you run rhel6 on a laptop?
 
 Security
 --------
@@ -83,6 +91,8 @@ Public keys for cjdns are based on Elliptic Curves.  There is a known quantum al
 The Distributed Hash Table algorithm is a core component of cjdns - which is vulnerable to a Denial of Service attack known as "Sybil".  This attack can block specific updates to the DHT - to prevent your node from joining a mesh, for instance.
 
 On the positive side, you can safely use telnet to cjdns IPs and the http protocol is automatically encrypted (but you need a secure DNS or raw ip to be sure you are talking to the right node).  Many other protocols are automatically encrypted while using cjdns.  In general, connecting to a raw cjdns IP is functionally equivalent to SSL/TLS with both client and server authentication.
+
+Since the cjdroute core routing code parses network packets from untrusted sources, it is a security risk and is heavily sandboxed.  It runs as the cjdns user in a chroot jail in an empty directory, with RLIMIT_NPROC set to 1 to disable forking.  Seccomp is used to limit available system calls to only those actually needed.  Installing the cjdns-selinux package installs a targeted selinux policy that also restricts what the privileged process can access.
 
 Advanced config
 ---------------
