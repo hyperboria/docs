@@ -32,23 +32,26 @@ which produced it, and cannot [insert standard cryptography disclaimer] be
 spoofed.  Most mesh VPNs decrypt packets before routing to a new node.  This means that if
 a relay node is compromised in a conventional VPN, it can see and even alter packets.
 All cjdns packets are end to end encrypted - relay nodes are untrusted.
-There is no centralized routing.  If a node is "blackholing" packets
-for some reason - a sender simply doesn't route through that node anymore.  (But see Security below.)
+Cjdns is source routed, there is no centralized routing.  If a node is "blackholing" your packets
+for some reason - simply doesn't route through that node anymore.  (But see Security below.)  The
+usual security problems with source routing don't apply because cjdns IPs can't be spoofed.
 
 Installing CJDNS on Fedora and EPEL
 ===================================
 
-Since Fedora 23, cjdns is in the Fedora repository.  It is in the testing repository until it gains sufficient positive karma.  To install:
+Since Fedora 22, cjdns is in the Fedora repository.  To install:
 
 ```bash
-sudo dnf install cjdns cjdns-tools cjdns-selinux --enablerepo=updates-testing
+sudo dnf install cjdns cjdns-tools cjdns-selinux
+```
+For rhel6 and rhel7 use:
+```bash
+yum install cjdns cjdns-tools cjdns-selinux
 ```
 
 The cjdns-tools package has peerStats and other nodejs tools.  Python versions of the tools are in cjdns-python - although the ones conflicting with the nodejs tools are not symlinked to /bin.
 
-The cjdns-selinux package has an selinux sandbox for cjdroute, to prevent it from doing anything wonky through accident or malice.  Some don't trust selinux (because of NSA origins), but it is installed by default on Fedora - so if you are running Fedora you want this.
-
-For rhel6 and rhel7 with the EPEL repo, use the epel-testing repo instead of updates-testing.
+The cjdns-selinux package has an selinux sandbox for cjdroute, to prevent it from doing anything wonky through accident or malice.  Some don't trust selinux (because of NSA origins), but it is installed by default on Fedora and RHEL - so if you are running Fedora or RHEL/CentOS you want this.
 
 Start cjdroute:
 
@@ -101,45 +104,4 @@ You may install a network service that depends on cjdns, for instance you might 
 
 Feedback
 --------
-If you succeed, leave karma and feedback on https://bodhi.fedoraproject.org/updates/FEDORA-2016-8fb1a8db25 so that the package can move from testing to production.
-
-Installing CJDNS on Fedora 22
-=============================
-(last tested on Fedora 22, those with fedora versions older than 22 should substitute yum for dnf.)
-
-#Prerequisites
-```bash
-sudo dnf install git automake nodejs libseccomp-devel gcc 
-```
-
-#Getting cjdns
-```bash
-git clone https://github.com/hyperboria/cjdns
-```
-
-#Building cjdns
-```bash
-cd cjdns/
-./do
-```
-
-#Generating a config
-```bash
-./cjdroute --genconf > cjdroute.conf
-```
-
-#Setting cjdns to autostart on boot.
-
-First you'll want to edit contrib/systemd/cjdns.service to properly reflect where your cjdns binary and configuration are.
-Then, run these commands:
-
-```bash
-sudo cp cjdns.service /etc/systemd/system/cjdns.service # This gives systemd some information about cjdns.
-sudo systemctl enable cjdns.service #This sets cjdns to be started on boot. if you don't want that, feel free to leave this line out.
-sudo systemctl start cjdns.service #This actually starts cjdns.
-```
-
-Checking the logs:
-```bash
-sudo systemctl status -l cjdns
-```
+Report bugs with the Fedoral/EPEL packages on https://bugzilla.redhat.com 
