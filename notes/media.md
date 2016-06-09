@@ -38,6 +38,8 @@ https://sett.com/alansjourney/52637
 
 https://www.fastcompany.com/3044686/mesh-networks-and-the-local-internet-movement
 
+http://motherboard.vice.com/read/toronto-gets-its-own-free-encrypted-mesh-network-CRTC-meshnet
+
 ## ???
 
 http://www.zive.cz/clanky/sest-alternativnich-a-zapomenutych-internetu/sc-3-a-169392/default.aspx

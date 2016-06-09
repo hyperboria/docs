@@ -25,7 +25,7 @@ Sample Files:
     "name": "Your name, handle, nick, whatever",
     "email": "you@domain.tld",
     "xmpp": "you@domain.tld",
-    "other cool communication service": "whatever identifier they use",
+    "other cool communication service": "whatever identifier they use"
   },
   "last_modified": "2014-11-30T00:35:48+00:00",
   "pgp": {
@@ -55,7 +55,7 @@ Sample Files:
     "continent":"NA",
     "region":"Cascadia",
     "municipality":"Seattle",
-    "uri":"http://https://www.seattlemesh.net/"
+    "uri":"https://www.seattlemesh.net/"
   }
 }
 ```
