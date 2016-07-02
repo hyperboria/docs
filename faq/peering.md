@@ -106,7 +106,7 @@ cjd originally had no intention of implementing this, but someone<a href="/contr
 
 ## Is there a meshlocal in my vicinity?
 
-Check <a href="/locals">this page</a> for a basic list of some general areas. It is not an exhaustive list. If you'd like to get listed, check <a href="/contrib">my contributions page</a> for an idea on how to do that.
+Check <a href="/meshlocals/existing/">this page</a> for a basic list of some general areas. It is not an exhaustive list. If you'd like to get listed, check <a href="/contrib">my contributions page</a> for an idea on how to do that.
 
 ## Can someone give me peering info?
 
@@ -116,7 +116,7 @@ Check <a href="/locals">this page</a> for a basic list of some general areas. It
 01:55 -!- newguy [webchat@198.20.69.234] has quit [Client Quit]
 ```
 
-We see this **a lot**. Please read [the peering section of my old faq](/faq#peering), and [my page about meshlocals](/locals).
+We see this **a lot**. Please read [the peering section of my old faq](/faq#peering), and [my page about meshlocals](/meshlocals/intro.md).
 
 TL;DR :: this isn't a public network, and we're under no obligation to give credentials to everyone who asks. We aren't a non-profit, or a corporation, or even a cohesive group. Everyone here has their own motivations and ideas of what the network should be, and you need to find someone who wants to connect to you. Don't be shy, introduce yourself.
 
