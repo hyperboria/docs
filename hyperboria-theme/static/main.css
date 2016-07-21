@@ -1,0 +1,31 @@
+@import url("default.css");
+
+
+html, body{
+    font-family: Helvetica-neue, Sans-Serif;
+    height: 100%;
+}
+
+.body {
+    min-height: 1500px;
+}
+
+
+.document .sphinxsidebar li {
+    text-overflow: ellipsis;
+    list-style-position:inside;
+    overflow: hidden;
+}
+
+.document .sphinxsidebar ul {
+    margin-right: 0;
+}
+
+.todo {
+    color: #ccc;
+}
+
+.content {
+  width: 90%;
+}
+

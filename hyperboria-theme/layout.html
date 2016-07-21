@@ -1,0 +1,131 @@
+{#
+    hyperboria-theme/layout.html
+    ~~~~~~~~~~~~~~~~~~~
+
+    Sphinx layout template for the default theme.
+
+    :copyright: Copyright 2007-2014 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+
+{%- extends "basic/layout.html" %}
+
+{%- block sidebartoc %}
+            
+            
+            
+    {% set sidebar_menu = [
+        ('title', 'About Hyperboria'),
+            ('Asking Questions *TODO*', 'todo'),
+            ('Peering', 'faq/peering'),
+            ('Security', 'faq/security'),
+            ('Meshlocals', 'meshlocals/intro', 
+                [('Meshlocals around the world', 'meshlocals/existing/index'), 
+                ('Starting a Meshlocal', 'meshlocals/diy')]),
+            ('FAQ', 'faq/general'),
+            ('Achievements', 'achievements'),
+            ('Glossary', 'faq/glossary'),
+            
+        ('title', 'The cjdns routing protocol'),
+            ('About', '', [
+              ('Goals', 'project-goals'), 
+              ('Goals (russian)', 'project-goals-ru'),
+              ('Original whitepaper', 'Whitepaper'),
+              ('Brief intro', 'intro'),
+              ('Security Specification', 'security-specifications'),
+            ]),
+            ('Installation', '', [
+              ('Most Linuxes *TODO*', 'todo'),
+              ('OpenWrt', 'install/openwrt'),
+              ('Android *TODO*', 'todo'),
+              ('Firefox OS *TODO*', 'todo'),
+              ('OS X', 'install/osx'),
+              ('Debian Wheezy', 'install/debian-wheezy'),
+              ('Debian Jessie', 'install/debian-jessie'),
+              ('Arch', 'install/arch'),
+              ('Fedora', 'install/fedora'),
+              ('FreeBSD *TODO*', 'todo'),
+              ('OpenBSD *TODO*', 'todo'),
+              ('Windows', 'install/windows'),
+                ('Building *on* Windows', 'install/build-on-windows'),
+                ('Securing your Windows system', 'config/windows-firewall'),
+            ]),
+            ('Usage', '', [
+              ('Setup', 'config/configure'),
+              ('Operator guidelines', 'cjdns/operator-guidelines'),
+              ('Securing your system', 'config/network-services'),
+              ('Tools *TODO*', 'todo'),
+                ('Third party tools', 'ctrls'),
+              ('Admin API', 'cjdns/admin-api'),
+              ]),
+            ('Working with cjdns', '', [
+              ('Anatomy of cjdroute', 'cjdns/anatomy'),
+              ('Peering over UDP', 'cjdns/peering-over-UDP-IP'),
+              ('nodeinfo.json', 'cjdns/nodeinfo-json'),
+              ('Changelog', 'cjdns/changelog'),
+              ]),
+            ('HowTo', '', [
+              ('Using cjdns as a VPN', 'config/tunnel'),
+              ('Shorewall and VPN gateway', 'config/shorewall-and-vpn-gateway-howto'),
+              ('NAT gateway for non-cjdns nodes', 'config/nat-gateway'),
+              ('Autostart at login', 'config/autostart-at-login'),
+              ('Run as non-root user', 'config/non-root-user'),
+              ]),
+            ('Troubleshooting', '', [
+              ('Read this first', 'bugs/policy'),
+              ('Memory leaks', 'bugs/debugging-memory-leaks'),
+              ('SecComp', 'bugs/Seccomp'),
+              ('Analyzing network IO', 'traffic-analysis'),
+              ]),
+            ('Known issues', '', [
+                ('Horizon', 'bugs/horizon'),
+                ('Black Hole', 'bugs/black-hole'),
+                ('Secret Santa', 'bugs/santa'),
+                ]),
+            ('Configurator timeout', '', [
+                  ('Firewall on localhost', 'bugs/configurator-timeout'),
+                  ('UDP overflow', 'bugs/connectTo-overflow'),
+                  ('Hidden Peers', 'bugs/hidden-peers'),
+            ]),
+            ('OS/distro-specific quirks', 'bugs/distro-quirks'),
+            ('Reporting bugs', 'bugs/reporting')
+            
+            ]%}
+            
+             
+
+            {%- include "localtoc.html" %}
+            <h3><a href="{{ pathto('index') }}">Menu</a></h3>
+            <ul class="sidebar_menu">
+                {% for link in sidebar_menu %}
+                    {% if link[0] == 'title' %}
+                        <h4>{{ link[1] }}</h4>
+                    {% else %}
+                        {% if link[1] == '' %}
+                        <li class="subtitle">{{ link[0] }}</li>
+                        {% elif link[1] == 'todo' %}
+                        <li class='todo'>{{ link[0] }}</li>
+                        {% else %}
+                        <li><a href="{{ pathto(link[1]) }}">{{ link[0] }}</a></li>
+                        {% endif %}
+                        {% if link[2] %}
+                        <ul>
+                           
+                            {% for sublink in link[2] %}
+                                {% if sublink[1] == 'todo' %}
+                                <li class='todo'>{{ sublink[0] }}</li>
+                                {% else %}
+                                <li><a href="{{ pathto(sublink[1]) }}">{{ sublink[0] }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            
+                
+
+{%- endblock %}
+
