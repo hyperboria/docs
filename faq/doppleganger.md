@@ -30,26 +30,9 @@ So the session _should_ be rejected, but in reality this is incredibly hard to t
 
 > won't the routing be all messed up because routing is address dependant?
 
-This hasn't been tested thuroughly `Nathanial` has done inital tests.
-```
-10:41 < Nathanial> A node can ping its own ip address when multiple instances of cjdns use 
+This hasn't really been tested, or, if it has been, nobody has reported their findings. Everything below is speculative, so if you find the answer, feel free to update this document.
 
-the same config file, but that is only like one can ping oneself on an internal network 
-
-behind a lan
-```
-
-
-```
-10:42 < Nathanial> Two cjdns instances using the same config file -can not-
-
-(in my testing) make a connection between each other.
-```
-
-
-Everything below is speculative, so if you find the answer, feel free to update this document.
-
-We expect that if two distinct nodes (using different ipv4 addresses if connecting via udp) cannot successfully connect to a common peer directly using the same configuration file `since predicted, this has been confirmed`. The common node won't know which connection to treat as the actual destination.
+We expect that if two distinct nodes (using different ipv4 addresses if connecting via udp) cannot successfully connect to a common peer directly using the same configuration file. The common node won't know which connection to treat as the actual destination.
 
 If two nodes are launched, and they connect to different parts of the network using the same configuration file, then in theory they may both function. Since indirect connections are made using only a virtual address (your cjdns ipv6), the two nodes should be indistinguishable to anyone trying to connect to them.
 
