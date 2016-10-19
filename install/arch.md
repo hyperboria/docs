@@ -1,7 +1,6 @@
-# Installing cjdns on Arch
-
-In case of Arch cjdns is available in two version, normal which stablish `master` branch, and `-git` which is newest `crashey`. The second one is hosted on AUR.
+# Installing cjdns on arch
 
 	pacman -S cjdns
-	systemctl enable cjdns --now
+	systemctl enable cjdns
+	systemctl start cjdns
 
