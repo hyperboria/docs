@@ -1,0 +1,8 @@
+{
+    "name": "cjdns",
+    "version": "0.17.2",
+    "dependencies": {
+        "nthen": "~0.1.1",
+        "jshint": "2.4.1"
+    }
+}

@@ -1,0 +1,21 @@
+language: c
+
+branches:
+  only:
+    - crashey
+    - master
+    - stable-0.4
+    - stable-0.5
+    - stable-0.6
+
+compiler:
+  - gcc
+
+# migrate to travis' new container infrastructure
+sudo: false
+
+script:
+  - "uname -a"
+  - "bash node_build/run_jshint"
+  - "./do"
+  - "./android_do"

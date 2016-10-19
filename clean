@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# You may redistribute this program and/or modify it under the terms of
+# the GNU General Public License as published by the Free Software Foundation,
+# either version 3 of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+safeclean()
+{
+    echo "Oh look, a file called cjdroute.conf! I'll try not to touch it."
+    git clean -dxf -e cjdroute.conf ||
+        echo "Damn, your version of git won't let me do that,
+ please move cjdroute.conf to a safe place and try again"
+}
+
+git reset --hard
+
+( ls && ls ./build ) 2>/dev/null | grep 'cjdroute.conf' >/dev/null && safeclean && exit 0
+
+git clean -dxf
