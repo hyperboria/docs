@@ -1,3 +1,0 @@
-#!/bin/sh
-BASEDIR=$(dirname $0)
-python2 "$BASEDIR/cjdnsadmin/cli.py" $@
