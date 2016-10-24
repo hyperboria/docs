@@ -1,7 +1,7 @@
 # Building for Windows
 
-* If you're trying to build **on** windows, forget it, you wouldn't build software for an iPhone **on** an iPhone...
-* you must have at least Windows Vista because cjdns requires ConvertInterfaceLuidToGuid function https://msdn.microsoft.com/en-us/library/windows/hardware/ff546156%28v=vs.85%29.aspx introduced in Vista.
+* If you're trying to build **on** windows, forget it, you wouldn't build software for an iPhone
+**on** an iPhone...
 
 ## Build Prerequisites
 
@@ -10,10 +10,11 @@ Install mingw32
 For Ubuntu 14.04:
 
     sudo apt-get install mingw-w64
-
+    
 For older Ubuntu:
 
     sudo apt-get install gcc-mingw32
+
 
 ## Build Process
 
@@ -23,10 +24,9 @@ Cross-compile cjdns with the following command:
 
 ## Run-time Dependencies
 
-On your Windows machine, you need the TAP driver installed to allow cjdns to create its virtual network interface. You can get it from the OpenVPN project at their [main download page](https://openvpn.net/index.php/open-source/downloads.html), under "Tap-windows", or use [this direct link to version 9.9.2_3](https://swupdate.openvpn.org/community/releases/tap-windows-9.9.2_3.exe).
-
+On your Windows machine, you need the TAP driver installed to allow cjdns to create its virtual network interface. You can get it from the OpenVPN project at their [main download page](https://openvpn.net/index.php/open-source/downloads.html), under "Tap-windows", or use [this direct link to version 9.9.2_3](http://swupdate.openvpn.org/community/releases/tap-windows-9.9.2_3.exe).
+    
 Check name of your new virtual connection it must contain only english letters or numbers
-
 ## Installation
 
 Once the TAP driver is installed, copy the `cjdroute.exe` file over to your windows machine.
@@ -34,13 +34,13 @@ Once the TAP driver is installed, copy the `cjdroute.exe` file over to your wind
 Generate a configuration file with:
 
     cjdroute --genconf > cjdroute.conf
-
+    
 You probably want to uncomment the `"logTo":"stdout"` line so that you can see any error messages in your terminal.
 
 Then, execute cjdns from an elevated command prompt:
 
     cjdroute --nobg < cjdroute.conf
-
+    
 The `--nobg` option is required; otherwise cjdns just quits.
 
 The first time you start it, a Windows firewall dialog will probably pop up. *Make sure to allow cjdns to accept connections from the Internet.*
@@ -48,3 +48,4 @@ The first time you start it, a Windows firewall dialog will probably pop up. *Ma
 ## Next Steps
 
 Congratulations! You are now running cjdns on Windows! Go find some peers!
+
