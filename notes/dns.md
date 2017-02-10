@@ -59,7 +59,7 @@ Now might be a good time to actually figure out how we're going to move forward.
 - .mesh # also descriptive, makes for nice vanity urls... seattle.mesh, toronto.mesh, etc.
   - is potentially bad because we are not the only mesh network # fuck da police, also, if it's internal to hyperboria it shouldn't affect anyone (assuming the links posted are also internal) # if other meshes are using ICANN, they are ostensibly doing it wrong. but then.. so are we.. soooo yea
   - .net # because why not go full troll mode (this is not a serious suggestion) <3
-- ????  # idk, propose something yourself
+- .yea # because that's what you think when you're on Hyperboria - YEA!
 - should/could be descriptive of what the site is for, such as .mail, .forum, .blog, .wiki  // there's the issue of 'poisoning' the namespace. eventually when clearnet increases the number of TLDs hype users might not be able to access clearnet sites. If they have to migrate a hype domain they've had for some time to something new because of an ICANN conflict, they'll be pissed. Hardlinkes are hard to get rid of. I'm in favour of having fewer hype TLDs (until we need more) to avoid this complication.
 
 
