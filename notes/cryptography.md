@@ -26,7 +26,7 @@
   + newlines (\n)
   + quotation marks (")
   + backticks (`)
-  + backslashes (\)
+  + backslashes (\\)
   + spaces ( )
   + tabs (\t)
   + curly braces ({,})
