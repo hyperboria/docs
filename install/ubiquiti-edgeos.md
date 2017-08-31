@@ -1,6 +1,6 @@
 # cjdns for Ubiquiti EdgeOS
 
-This is a cjdns distributable package for Ubiquiti EdgeOS on supported EdgeMAX routers. It is integrated with the command line interface (CLI) allowing cjdns to be configured through the standard EdgeMAX configuration system.
+The `vyatta-cjdns` package provides cjdns support on supported Ubiquiti EdgeMAX routers.  It is integrated with the command line interface (CLI) allowing cjdns to be configured through the standard EdgeOS configuration system.
 
 It is maintained in a separate repository, please see [neilalexander/vyatta-cjdns](https://github.com/neilalexander/vyatta-cjdns) on GitHub for the source code (licenced under GPLv3), build scripts and tagged binary releases. 
 
