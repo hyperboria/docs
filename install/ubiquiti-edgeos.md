@@ -1,14 +1,13 @@
 # cjdns for Ubiquiti EdgeOS
 
-This is a cjdns distributable package for Ubiquiti EdgeOS. It supports configuration through the standard configuration editor and, despite being in early stages, integrates quite well with the EdgeOS CLI.
+The `vyatta-cjdns` package provides cjdns support on supported Ubiquiti EdgeMAX routers.  It is integrated with the command line interface (CLI) allowing cjdns to be configured through the standard EdgeOS configuration system.
 
-It is maintained in a separate repository, please see [neilalexander/vyatta-cjdns](https://github.com/neilalexander/vyatta-cjdns) on GitHub. 
+It is maintained in a separate repository, please see [neilalexander/vyatta-cjdns](https://github.com/neilalexander/vyatta-cjdns) on GitHub for the source code (licenced under GPLv3), build scripts and tagged binary releases. 
 
 Currently tested models:
 
-|                       | Architecture | Compatible |                      Notes                           |
-|-----------------------|:------------:|:----------:|:----------------------------------------------------:|
-|    EdgeRouter X (ERX) |    mipsel    |     Yes    | Builds on Debian Jessie with crossbuild-essential    |
-| EdgeRouter Lite (ERL) |    mips64    |     Yes    | Builds on Debian Jessie with Codescape SDK as mips32 |
+|                       | Architecture | Binaries |                      Notes                           |
+|-----------------------|:------------:|:--------:|:----------------------------------------------------:|
+|    EdgeRouter X (ERX) |    mipsel    | [Download](https://github.com/neilalexander/vyatta-cjdns/releases/) | Builds on Debian Jessie with crossbuild-essential   |
+| EdgeRouter Lite (ERL) |    mips64    | [Download](https://github.com/neilalexander/vyatta-cjdns/releases/) | Builds on Debian Jessie with Codescape SDK as mips32 |
 
-In addition to supporting Ubiquiti EdgeOS, the package should be very easily able to support VyOS and other Vyatta-based distributions with some minor changes, although that is not within the scope of this particular project.
