@@ -1,4 +1,13 @@
-# Hyperboria/docs
+# Hyperboria/docsd
+
+## Community
+
+* [CJDNS](https://github.com/cjdelisle/cjdns)
+* [/r/darknetplan](https://www.reddit.com/r/darknetplan/)
+* [#hyperboria on Twitter](https://twitter.com/search?q=%23hyperboria&src=typd)
+* [/r/hyperboria](https://www.reddit.com/r/hyperboria/).
+* [Docs](https://hyperboria.net/)
+* IRC: EFnet/#cjdns 
 
 ## What is Hyperboria?
 
