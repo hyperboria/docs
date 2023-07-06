@@ -5,6 +5,7 @@ yours by submitting a pull request.
 
  * **Europe**
   * [Freifunk: Leipzig, Berlin, Hamburg](freifunk.md)
+  * [Janmesh.net: South of Jura, France](janmesh.md)
  * **United States**
   * California
     * [San Diego](sandiego.md)
